@@ -1,0 +1,160 @@
+/** Workorder priority */
+td.SPEC_0 {   color: white; background-color: red;  }
+td.SPEC_1 {   color: black; background-color: orange; }
+td.SPEC_2 {   color: black; background-color: olive; }
+td.SPEC_3 {   color: black; background-color: olive; }
+td.SPEC_4 {   color: black; background-color: olive; }
+td.SPEC_9 {   color: darkblue; background-color: aqua; }   
+/** Workorder status */
+td.SPEC_R {   color: white; background-color: red; }   
+td.SPEC_B {   color: black; background-color: olive; }    
+td.SPEC_A {   color: black; background-color: yellow; }
+td.SPEC_I {   color: black; background-color: orange; }    
+td.SPEC_M {   color: black; background-color: orange; }
+td.SPEC_P {   color: red; background-color: orange; }
+td.SPEC_PL {   color: white; background-color: green; }
+td.SPEC_PR {   color: white; font-weight: bold; background-color: green; }
+td.SPEC_F {   color: black;  font-weight: bold; background-color: lightgrey; }
+td.SPEC_C {   color: white;  background-color: darkgrey; }  
+   
+td.SPEC_SCOPE_TOBE_DEFINED {
+    color: black;
+    background-color: orange;
+}  
+td.SPEC_SCOPE_DEFINED {
+    color: black;
+    background-color: lightgreen;
+} 
+td.SPEC_STARTED {
+    color: red;
+    background-color: green;
+}
+td.SPEC_WORK_PLANNED {
+    color: white;
+    background-color: green;  
+}  
+td.SPEC_WORK_CONFIRMED {
+    color: white;
+    background-color: lightgreen;      
+}   
+td.SPEC_PURCHASE_REQUEST {
+    color: black;
+    background-color: green;          
+}  
+td.SPEC_PURCHASE_ORDER {
+    color: black;
+    background-color: green;
+}
+td.SPEC_INFO {
+    color: white;
+    background-color: darkblue;
+}
+td.SPEC_BD {
+    color: black;
+    background-color: red;
+}
+td.SPEC_WR {
+    color: black;
+    background-color: orange;
+}
+td.SPEC_framework {
+    color: black;
+    background-color: lightblue;
+}
+td.SPEC_work {
+    color: white;
+    background-color: red;
+}
+td.SPEC_ppm {
+    color: black;
+    background-color: orange;
+}
+td.SPEC_action {
+    color: white;
+    background-color: blue;
+}
+td.SPEC_purchasing {
+    color: white;
+    background-color: green;
+}
+td.SPEC_library {
+    color: white;
+    background-color: black;
+}
+td.SPEC_warehouse {
+    color: black;
+    background-color: yellow;
+}
+td.SPEC_objects {
+    color: black;
+    background-color: aqua;
+}
+td.SPEC_OK {
+    color: black;
+    background-color: green;
+}    
+td.SPEC_NOK {
+    color: white;
+    background-color: red;
+}
+td.SPEC_BLOCK {
+    color: black;
+    background-color: orange;
+}
+td.SPEC_23 {
+    color: black;
+    background-color: lightgreen;
+}
+td.SPEC_28 {
+    color: black;
+    background-color: cyan;
+}
+td.SPEC_29 {
+    color: white;
+    background-color: darkblue;
+}
+td.SPEC_30 {
+    color: black;
+    background-color: orange;
+}
+
+td.SPEC_ASCO {
+    color: black;
+    background-color: green;
+}
+td.SPEC_DESTROOPER, 
+td.SPEC_REMACLE,
+td.SPEC_SARALEE {
+    color: black;
+    background-color: orange;
+}
+
+td.SPEC_FRAME {
+    color: black;
+    background-color: darkgrey;
+}
+td.SPEC_WORK,
+td.SPEC_INVY,
+td.SPEC_OBJECTS,
+td.SPEC_PPM {
+    color: black;
+    background-color: green;
+}
+td.SPEC_CUSTOM {
+    color: black;
+    background-color: orange;
+}
+td.SPEC_8D,
+td.SPEC_OEE,
+td.SPEC_BETA {
+    color: white;
+    background-color: red;
+}
+/** Colouring for TREE and list */
+td.SPEC_FL,td.FL {  background-color: cyan; }
+td.SPEC_EQ,td.EQ,td.SPEC_FLOK,td.FLOK {    background-color: orange; color: black; }
+td.SPEC_MOV,td.MOV {    background-color: green; color: white; }
+td.SPEC_NEW,td.NEW {    background-color: yellow; color: red; }
+td.SPEC_DEL,td.DEL {    background-color: black; color: white; }
+td.SPEC_NOOBJECT,td.NOOBJECT {  background-color: orange; color: black; }
+td.SPEC_ARTICLE,td.ARTICLE {    background-color: orange; color: green; }

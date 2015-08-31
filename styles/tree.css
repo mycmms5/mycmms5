@@ -1,0 +1,19 @@
+body, li, td { 
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px; 
+    margin: 2px;   }
+h1 { 
+    font-size: 20px;
+    font-weight: normal; 
+    font-color: white;
+    color:  white; 
+    margin-bottom: 0;    }
+b { 
+    font-size: 12px;
+    font-weight: normal; 
+    color: red; }
+a { 
+    font-family: inherit;
+    font-size: inherit;
+    color: #000000; }
+  

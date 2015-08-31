@@ -1,0 +1,143 @@
+body {
+     font-weight: bold;
+     font-family: arial, helvetica, geneva, sans-serif;
+     color: #000000;
+     background: #5961a0;
+     padding: 0px;
+     margin: 0px;
+}
+/*  The myCMMS Logo right justified */
+div.logo {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+/* Navigational Plone Tabs(tm) from Plone.org extensively modified my Chris Morris */
+div.tabs {   
+    position: absolute;
+    bottom: 14px;
+    left: 1em;
+    background: transparent;
+    margin: 0 0 0 0;
+    padding: 0em 0em 0em 0em;
+    border-bottom: 0px solid #000066;
+    border-collapse: collapse;
+    white-space: nowrap;
+    color: #FF6060; /*#EDEDED;*/
+    z-index: 2;
+}
+div.tabs a {
+    /* The normal, unselected tabs. They are all links */
+    background: #5961a0;
+/*    background: transparent;*/
+    border-color: #8CACBB;
+    border-width: 1px; 
+    border-style: solid solid none solid;
+    color: #EDEDED;
+    font-weight: normal;
+    height: 2em;
+    margin: 5px 5px 0px 0px;
+    padding: 0px 10px 0px 10px;
+    text-transform: lowercase;
+    text-decoration: none;
+}
+div.tabs form {
+    /* The normal, unselected tabs. They are all links */
+    background: transparent;
+    color: #EDEDED;
+    font-weight: normal;
+    height: 1.2em;
+    margin-right: 0.5em;
+    padding: 0em 2em;
+    text-transform: lowercase;
+    text-decoration: none;
+}
+div.tabs a.selected {
+/*  The myCMMS selected tab. There's only one of this */
+    background: #FF0000;
+    color: #FFFFFF;
+    border: 1px solid #8CACBB;
+    border-bottom: 1px solid #FF0000;
+    font-weight: normal;
+}
+div.tabs a.plain {
+/*  The myCMMS non-selected tabs */
+    background: transparent;
+    color: #FFFFFF;
+    border-color: #8CACBB;
+    border-width: 1px ;
+    border-style solid solid none solid;
+    font-weight: normal;
+}
+
+div.tabs a:hover 
+{
+    background: #DEE7EC;
+    border-color: #8CACBB;
+    border-bottom-color: #DEE7EC;
+    color: #436976;
+}
+
+div.personalBar {
+/*  Bar with personalized menu (user preferences, favorites etc) */
+    border-collapse:collapse;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background:  #FF0000;
+    color: #FFFFFF;
+    border-top: 1px solid #8CACBB;
+    padding: 0 0 0 0;
+    text-transform: lowercase;
+    font-size: 10px;
+    height: 15px;
+    z-index: 1;
+}
+
+div.personalBar a {
+    background-color: transparent;
+    color: #436976;
+    font-weight: normal;
+    margin-left: .5;
+    text-decoration: none;
+}
+
+.location {
+    /* The path bar, including breadcrumbs and add to favorites */
+    position: absolute;
+    left: 2em;
+    font-size: 12px;
+    text-transform: lowercase; 
+    text-align:left ;
+}
+
+.auth {
+    /* Bar with personalized menu (user preferences, favorites etc) */
+    position: absolute;
+    text-align:right;
+    width: 48%;
+    left: 50%;
+    margin-right: 10em;
+    text-transform: lowercase;
+    font-size: 10px;
+    height: 15px;
+    padding-bottom: 0;
+}
+
+input 
+{
+
+	background-color: #F5F5F5
+	border-style: solid;*/
+	padding: 0px;
+	margin: 0px 0px 2px 0px;
+	font-family: "arial";
+	font-size: 10px;
+	color: #333333;
+	vertical-align: middle;
+	height: 18px;
+    border: 1px solid #000066; }
+input[type=submit] {
+	background: transparent;
+	color: #EDEDED;
+	color: black; }

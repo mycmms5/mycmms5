@@ -1,0 +1,97 @@
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    background: #FFFFFF;
+    color: #EDEDED; }
+a {
+	color: #000066; }
+form {
+	margin-bottom:0px;
+	margin-top:0px;
+	color: #000066; }
+textarea,input,select {
+	background-color: #fAfAfA;
+	border-width: 1px;
+	border-color: #8CACBB;
+	border-style: solid;
+	padding: 2px;
+	margin: 1px;
+	font-family: "arial";
+	font-size: 12px;
+	color: #333333; }
+input[type=image] {
+	border-style: none;
+	background: #transparent;
+	font-size: 8pt; }
+input.save {
+	position:fixed;
+	top:0%;
+	right:0%; }
+/* 
+** The div.box... stuff comes from the following source:
+**
+** Plone style sheet for CSS2-capable browsers.
+** Copyright Alexander Limi, 2002 - http://limi.net
+**
+** Thanks to Geir Bækholt, Stian Søiland for input and guidance.
+**
+** Style sheet documentation can be found at http://plone.org/documentation
+**
+** Feel free to use whole or parts of this for your own designs, but give credit
+** where credit is due.
+**
+*/
+div.box h5 { 
+   /* background: #DEE7E;*/
+    border: 1px solid #8CACBB;
+    border-style: solid solid none solid;
+    background: #5961a0;
+ /*   color: #CCCCFF;*/
+    color: #DEDEDE;
+    padding: 0em 1em 0em 1em;
+    text-transform: lowercase;
+    display: inline;
+    font-size: 11px;
+    font-weight: bold;
+    height: 1em;
+}
+div.box {
+    border: none;
+    margin: 0em 0em 1.5em 0em;
+    padding: 0px 5px 0px 5px;
+}
+div.box div.body  {
+    background: transparent;
+    border-collapse: collapse;
+    border: 1px solid #8CACBB;
+    background: #EEEEEE; /*#CCCCCC;*/
+}
+div.box .content {
+    padding: .5em;
+}
+div.box a {text-decoration: none;}
+.no_link
+{
+	color: #777788;
+}
+div.box a:hover 
+{
+	color: #0000FF;
+	text-decoration: underline;
+}
+div.box .even 
+{
+    background-color: #F7F9FA;
+}
+div.box .odd 
+{
+    background-color: transparent;
+}
+
+div.spacer {
+	margin: 1em;
+}
+.currentNavItem {
+    color: Black;
+    font-weight: bold;
+}

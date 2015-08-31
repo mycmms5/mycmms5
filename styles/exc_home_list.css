@@ -1,0 +1,103 @@
+/** See hn_music.css **/
+/** See hn_cie.css **/
+/** See hn_books.css **/    
+/** See hn_home.css **/    
+td.SPEC_Active {
+    color: black;
+    background-color: green; }     
+td.SPEC_Archive {
+    color: black;
+    background-color: lightgrey; }    
+td.SPEC_DRAWER {
+    color: black;
+    background-color: cyan; }
+td.SPEC_GONE {
+    color: white;
+    background-color: darkblue; }  
+td.SPEC_BW {
+    color: black;
+    background-color: orange; }                  
+td.SPEC_APPLE {
+    color: black;
+    background-color: orange; }  
+/* Styles for VIDEO locations */    
+td.SPEC_HAMA {
+    color: white;
+    background-color: darkgreen; }
+td.SPEC_UNKNOWN, td.SPEC_Temporary, td.SPEC_XPS {
+    color: white;
+    background-color: red; }                            
+td.SPEC_BOX {
+    color: white;
+    background-color: red; }                        
+td.SPEC_MAP {
+    color: white;
+    background-color: darkblue; }                        
+td.SPEC_PC {
+    color: black;
+    background-color: olive; } 
+td.SPEC_OS {
+    color: black;
+    background-color: orange; }                           
+td.SPEC_GONE {
+    color: white;
+    background-color: darkgrey; }  
+/* Styles for Articles */
+td.SPEC_PDF {
+    color: black;
+    background-color: cyan; }
+td.SPEC_INTERNET {
+    color: black;
+    background-color: darkgreen; }
+td.SPEC_GROUP {
+    background-color: orange; }    
+td.SPEC_COMPOSER {
+    background-color: cyan; } 
+/**
+* framework_list_kms.tpl
+*/
+td.SPEC_FILL-UP {
+    color: white;
+    background-color: red;
+}
+td.SPEC_ORDER {
+    color: white;
+    background-color: darkgreen;
+}
+td.SPEC_NEGOTIATION {
+    color: black;
+    background-color: orange;
+}
+td.SPEC_Maintenance {
+    color: red;
+    background-color: orange;
+}
+td.SPEC_Music {
+    color: black;
+    background-color: red;
+}
+td.SPEC_Travel {
+    color: white;
+    background-color: darkgrey;
+}
+
+td.SPEC_CBC, td.SPEC_DB, td.SPEC_INSURANCE {
+    color: white;
+    background-color: darkblue;
+}
+td.SPEC_BILL {
+    color:black;
+    background-color: orange;
+}
+td.SPEC_SW, td.SPEC_SOFTWARE {
+    color:white;
+    background-color: green;
+}
+td.SPEC_LOG, td.SPEC_BROL {
+    color: black;
+    background-color: lightyellow;
+}
+td.SPEC_INFO, td.SPEC_MANUAL {
+    color: black;
+    background-color: skyblue;
+}

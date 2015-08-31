@@ -1,0 +1,49 @@
+body {
+/*    font-family: arial, helvetica, geneva, sans-serif; 
+*/
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;    }
+form {
+	font-size: 15px; }
+input.textfield, select, textarea {   
+    font-size: 11px;
+	color: darkblue; 
+	background-color: white;    }
+table {
+    border: 0;
+    cellpadding: 2;
+}
+th {
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: darkblue;
+    padding: 1px, 1px, 1px, 1px;
+    margin: 1px, 1px, 1px, 1px;
+}
+td  {
+	font-size: 12px;    }
+.hidden {
+    display: none;
+}  
+.error {
+    font-size:12pt;
+    font-weight: bold;
+    color: red;
+}
+div.info {   
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    font-size: 10pt;
+}
+div.navbar {
+    font-size: 14px;
+    background-color: transparant;
+}
+a {
+    color: white;
+    font-weight: normal;
+}
+a.columntitle {
+    color: black;
+}

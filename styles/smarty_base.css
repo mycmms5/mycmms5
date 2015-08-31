@@ -1,0 +1,83 @@
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:15px; 
+    margin:0px; 
+    padding:0px; 
+    background-color: lightgrey; }
+input, text, select, textarea, datum {
+    font-family: Verdana, Geneva, sans-serif; 
+    font-size: 12px;
+    color: black; 
+    background-color: white; }  
+table {
+    background-color: transparent;
+    border-width: thin;
+    font-size:13px; } 
+th {
+    font-size: 12px;
+    font-weight: normal;
+    color: darkblue;
+    background-color: darkgrey; }    
+td {
+    font-size: 12px;
+    padding: 1px;
+    border-width: thin;
+    border: hidden; }
+.ColouredCB input { 
+    background: Red; 
+} 
+td.LABEL {
+    color: darkblue;
+    font-style: italic;
+    text-align: right;
+    vertical-align: baseline;
+}
+td.LABELLEFT {
+    color: darkblue;
+    font-style: italic;
+    text-align: left;
+    vertical-align: baseline;
+}
+h1 {
+    text-align:center; 
+    font-size:16px; } 
+h1.action {
+    font-size: 18px;
+    color: black;
+    background-color: orange;
+    padding-left: 10px;
+    margin-right:50px; }
+h2 {
+    font-size:14px; } 
+h3 {
+    color:#336699; 
+    font-size:13px; }
+h3.action {
+    font-size: 16px;
+    color: black;
+    background-color: orange;    
+    padding-left: 10px;
+    margin-right:50px; } 
+h4 { 
+    font-size: 18px; 
+    letter-spacing: 5px; 
+    position: absolute; 
+    left: 247px; 
+    top: 325px; 
+    color: #336699; }  
+div.error {
+    background-color: red;
+    color: white;
+}
+div.success {
+    background-color: green;
+    color: white;
+}
+div.information {
+    font-size: 12px;
+    color: darkblue;
+}
+div.CVS {
+    font-size: 10px;
+    color: darkblue;
+}

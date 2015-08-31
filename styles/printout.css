@@ -1,0 +1,127 @@
+<style TYPE="text/css" TITLE="2D Input" MEDIA=all> 
+body {
+    font-family: arial, helvetica, geneva, sans-serif;
+    font-size: 11px;
+  	background-color:  #F0F0F0;
+    color: #333333; }
+h1 {
+	font-size: 12px;
+	background-color: lightgrey;
+	border-style: solid;
+	border-width: 1px 0px 1px 0px;
+	padding-left: 10px;
+	margin-right:20px;
+}
+h1.TITLE {
+    background-color: #D3DCE3;
+    color: darkblue;
+    font-size: inherit;
+}
+h2 {
+  	font-size: medium;
+	background-color: #F0F0F0;
+	border-style: solid;
+	border-width: 1px 0px 1px 0px;
+	padding-left: 10px;
+	margin-right:20px;
+	}
+h2.None {
+  	font-size: medium;
+	background-color: #00A000;
+	border-style: solid;
+	border-width: 1px 0px 1px 0px;
+	padding-left: 10px;
+	margin-right:20px;
+	}
+table {
+	width: 700px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: darkblue;
+	border-collapse:collapse;
+	margin-left: 25px;
+	margin-bottom: 25px;
+}	
+a.nav:link      
+{   
+	font-family: arial, helvetica, geneva, sans-serif; 
+	color: #000000
+}
+a.nav:visited   
+{
+	font-family: arial, helvetica, geneva, sans-serif; 
+	color: #000000.
+	text-decoration: none;
+}
+a.nav:hover     
+{
+	font-family: arial, helvetica, geneva, sans-serif; 
+	color: #FF0000
+	
+}
+th.title {
+    font-size: 16px;
+    color: blue;
+    background-color: red;
+}
+th.no-info {
+    font-size: 12px;
+    color: darkgrey;
+    background-color: lightgrey;
+}
+td.topline {	border-width: 2px;        }
+td {
+    font-family: arial, helvetica, geneva, sans-serif; 
+    font-size: 14px;
+    
+}
+td.name             
+{	font-family: arial, helvetica, geneva, sans-serif; 
+	font-size: 11px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #000000;
+}
+td.value
+{	font-family: arial, helvetica, geneva, sans-serif; 
+	font-size: 11px;
+    color: #000000;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+}
+td.number
+{	font-family: arial, helvetica, geneva, sans-serif; 
+	font-size: 11px;
+	text-align: right;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+}
+th              
+{	font-family: arial, helvetica, geneva, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: darkblue;
+    border-style: solid;
+	border-width: 1px;
+	border-color: darkblue;
+	
+	background-color: #D3DCE3;
+ 	padding: 1px, 1px, 1px, 1px;
+	margin: 1px, 1px, 1px, 1px;
+	-moz-border-radius-topleft: 1px;
+	-moz-border-radius-topright: 1px;
+}
+.print
+{
+	font-family:arial;
+	font-size:8pt;
+}
+.info
+{	font-family: arial;
+	font-size: x-small;
+	background-color: #000000;
+	color: #FFFFFF;
+	margin-left: 3%; }	
+</style>

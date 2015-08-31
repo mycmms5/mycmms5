@@ -1,0 +1,1190 @@
+body {
+    margin:2px;
+    background: white;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  a {
+    color: black;
+    text-decoration:none;
+  }
+  a:hover {
+    color:#0000ff;
+  }
+  abbr {
+    cursor:help;
+  }
+  div {
+    border:0;
+  }
+  h2 {
+    color:black;
+    font-size:20px;
+  }
+  h3 {
+    font-size:18px;
+  }
+  fieldset {
+    width:96%;
+  }
+  label {
+    font-weight:bold;
+    font-size:11px;
+  }
+  p,
+  input,
+  select {
+    font-size:12px;
+  }
+  textarea {
+    font-size:12px;
+    overflow:auto;
+  }
+  table {
+    border:0;
+    border-spacing:0;
+  }
+  th {
+    font-size:13px;
+    padding:0;
+    background: white;
+    color: black;
+  }
+  th.info {
+      font-size: 13px;
+      color: white;
+      background-color: blue;
+  }
+  td {
+    font-size:11px;
+  }
+  td.info {
+      font-size: 13px;
+      text-align: center;
+      font-style: oblique;
+      background-color: lightgrey;
+  }
+  ul,
+  ul a {
+    font-size:12px;
+  }
+
+  .main {
+    clear:both;
+    width:100%;
+    border-right:1px solid black;
+    border-bottom:1px solid black;
+  }
+  .main th {
+    width:14%;
+    border-top:1px solid black;
+    border-left:1px solid black;
+    background-color: white;
+    vertical-align:top;
+  }
+  .main th.weekend {
+    background-color: black;
+  }
+  .main td {
+    width:14%;
+    border-top:1px solid black;
+    border-left:1px solid black;
+    background-color: #C0C0C0;
+    vertical-align:top;
+  }
+  .main td.weekend {
+    background-color: #D0D0D0;
+  }
+  .main td.hasevents {
+    background-color: #FFFF33;
+  }
+  .main td.othermonth {
+    background-color: #D0D0D0;
+  }
+  .main td.today {
+    background-color: #FFFF33;
+  }
+  .underline {
+   text-decoration:underline;
+  }
+  .cursoradd a {
+    cursor:pointer;
+  }
+  #tabs,
+  #tabscontent {
+    position:relative;
+    width:96%;
+  }
+  #tabscontent {
+    margin:-1px 2px;
+    border:2px groove #C0C0C0;
+    padding:.5em;
+    background:#F8F8FF;
+    z-index:50;
+  }
+  .tabfor,
+  .tabbak  {
+    margin:0 0 0 .1em;
+    border:2px ridge #C0C0C0;
+    border-bottom:2px solid #F8F8FF;
+    padding:.2em .2em .1em;
+    position:relative;
+    -moz-border-radius:.75em .75em 0 0;
+  }
+  .tabfor a,
+  .tabbak a {
+    font-weight:bold;
+    font-size:14px;
+  }
+  .tabfor a, 
+  .tabbak a {
+    color:#909090;
+  }
+  .tabfor {
+    background:#F8F8FF;
+    z-index:51;
+  }
+  .tabbak {
+    background:#E0E0E0;
+    z-index:49;
+  }
+  #editnonusers,
+  #editremotes,
+  #editremoteshandler,
+  #edituser,
+  #groupedit,
+  #viewsedit {
+    background:#F8F8FF;
+  }
+  #cat,
+  #day dl.desc,
+  #grpiframe,
+  #nonusersiframe,
+  #remotesiframe,
+  #tabscontent_boss,
+  #tabscontent_colors,
+  #tabscontent_email,
+  #tabscontent_groups,
+  #tabscontent_header,
+  #tabscontent_nonuser,
+  #tabscontent_nonusers,
+  #tabscontent_other,
+  #tabscontent_participants,
+  #tabscontent_pete,
+  #tabscontent_public,
+  #tabscontent_reminder,
+  #tabscontent_remotes,
+  #tabscontent_sched,
+  #tabscontent_subscribe,
+  #tabscontent_themes,
+  #tabscontent_uac,
+  #useriframe,
+  #viewiframe {
+      display: none;
+  }
+  #viewt .main tr.weekend,
+  .main td.weekend,
+  .main th.weekend,
+  .minical td.weekend,
+  .minical th.weekend {
+    margin:0;
+    padding:0;
+  }
+  #tabscontent_colors p span,
+  .sample {
+    margin:0 1px;
+    border-style:groove;
+    padding:0 8px;
+  }
+  .weeknumber {
+    color: red;
+    font-size:12px;
+    text-decoration:none;
+  }
+  img {
+    border:0;
+  }
+  img.color {
+    width:15px;
+    height:15px;
+  }
+  #cat {
+    font-size:18px;
+  }
+  #dateselector,
+  #trailer {
+    margin:0;
+    padding:0;
+  }
+  #dateselector form {
+    float:left;
+    width:33%;
+    margin-top:5px;
+    margin-bottom:25px;
+    padding-top:5px;
+  }
+  #dateselector label,
+  #trailer label {
+    margin:0;
+    padding:0;
+  }
+  #monthform {
+    clear:left;
+    margin-bottom:0;
+  }
+  #weekform {
+    margin-bottom:0;
+    text-align:center;
+  }
+  #weekmenu,
+  #monthmenu,
+  #yearmenu {
+    margin-bottom:0;
+    font-size:9px;
+    text-align:right;
+  }
+  #yearform {
+    clear:right;
+    margin-bottom:0;
+    text-align:right;
+  }
+  #menu {
+    clear:both;
+  }
+  #menu,
+  #menu a,
+  .prefix,
+  .printer {
+    font-size:14px;
+  }
+  .prefix {
+    font-weight:bold;
+  }
+  a#programname {
+    margin-top:10px;
+    font-size:10px;
+  }
+  .printer {
+    clear:both;
+    width:15ex;
+    color:white;;
+    text-decoration:none;
+    display:block;
+  }
+  .new {
+    float:right;
+  }
+  .unapprovedentry {
+    padding-right:3px;
+    color:#800000;
+  /* Remove comments to set unapproved in italics.
+    font-style:italic;
+  */
+    font-size:12px;
+    text-decoration:none;
+  }
+  .nounapproved {
+    font-weight:bold;
+    font-size:14px;
+  }
+  #listunapproved .odd {
+    background: #FFFF33;
+  }
+  .entry,
+  .layerentry {
+    padding-right:3px;
+    font-size:12px;
+    text-decoration:none;
+  }
+  .layerentry {
+    color:#006060;
+  }
+  .entry {
+    color:#006000;
+  }
+  .entry img,
+  .layerentry img,
+  .unapprovedentry img {
+    margin-right:2px;
+    margin-left:2px;
+  }
+  .dayofmonth {
+    border:1px solid black;
+    border-width:0 1px 1px 0;
+    padding:0 2px 0 3px;
+    color:black;
+    font-weight:bold;
+    text-decoration:none;
+    vertical-align:top;
+  }
+  .dayofmonth:hover {
+    border-right:1px solid #0000ff;
+    border-bottom:1px solid #0000ff;
+    color:#0000ff;
+  }
+  .next img,
+  #activitylog .next {
+    float:right;
+  }
+  .prev img,
+  #activitylog .prev {
+    float:left;
+  }
+  .next img,
+  .prev img {
+    margin-top:7px;
+    margin-right:3px;
+  }
+  #activitylog .next,
+  #activitylog .prev {
+    border:0;
+    font-weight:bold;
+    font-size:14px;
+  }
+  #day .next img,
+  #day .prev img {
+    margin-top:37px;
+  }
+  #day .monthnav .next img,
+  #day .monthnav .prev img {
+    margin:0;
+  }
+  .dailymatrix {
+    background: white;
+    cursor:pointer;
+    font-size:12px;
+    text-align:right;
+    text-decoration:none;
+  }
+  .dailymatrix:hover {
+    background:#cfc;
+  }
+  td.matrixappts {
+    width:0%;
+    background: #C0C0C0;
+    cursor:pointer;
+    text-align:left;
+    vertical-align:middle;
+  }
+  td.matrixappts:hover {
+    background:#cfc;
+  }
+  td.matrix {
+    height:1px;
+    background:#000;
+  }
+  .matrix img {
+    width:100%;
+    height:1px;
+  }
+  a.matrix img {
+    width:100%;
+    height:8px;
+  }
+  .matrixd {
+    margin-right:auto;
+    margin-left:auto;
+    border-right:1px solid black;
+    border-left:1px solid black;
+  }
+  .matrixledge {
+    border-left:1px solid #000;
+  }
+  .matrixlegend {
+    margin-top:25px;
+    margin-right:auto;
+    margin-left:auto;
+    border:1px solid #000;
+    padding:5px;
+    background:#ffffff;
+    text-align:center;
+  }
+  .matrixlegend img {
+    width:10px;
+    height:10px;
+  }
+  .nav {
+    color:white;;
+    font-size:14px;
+    text-decoration:none;
+  }
+  .popup {
+    position:absolute;
+    top:0;
+    left:0;
+    border:1px solid black;
+    padding:3px;
+    background-color: white;
+    color: black;
+    font-size:12px;
+    text-decoration:none;
+    visibility:hidden;
+    z-index:20;
+    -moz-border-radius:6px;
+  }
+  .popup dl,
+  .popup dt {
+    margin:0;
+    padding:0;
+  }
+  .popup dt {
+    font-weight:bold;
+  }
+  .popup dd {
+    margin-left:20px;
+  }
+  .tooltip,
+  .tooltipselect {
+    cursor:help;
+    font-weight:bold;
+    font-size:11px;
+    text-decoration:none;
+  }
+  .tooltip {
+    width:120px;
+  }
+  .tooltipselect {
+    vertical-align:top;
+  }
+  .user,
+  .categories {
+    color: black;
+    font-size:18px;
+    text-align:center;
+  }
+  .asstmode {
+    color: black;
+    font-weight:bold;
+    text-align:center;
+  }
+  .help {
+    font-weight:bold;
+    vertical-align:top;
+  }
+  .helpbody {
+    margin-bottom:1em;
+    font-weight:normal;
+    vertical-align:top;
+  }
+  .helpbody div {
+    border:1px solid #000;
+  }
+  .helpbody label {
+    font-size:1.1em;
+    vertical-align:top;
+  }
+  .helpbody p {
+    margin:1em;
+  }
+  .helplist {
+    border:0;
+    font-weight:bold;
+    font-size:1.2em;
+    text-align:center;
+  }
+  .helplist a {
+    font-weight:normal;
+    text-decoration:underline;
+  }
+  .helplist a.current {
+    font-weight:bold;
+    text-decoration:none;
+  }
+  #helpbug form {
+    margin-bottom:1em;
+  }
+  #helpbug label {
+    clear:left;
+    float:left;
+    width:32%;
+  }
+  #helpbug p {
+    margin:0 1em;
+  }
+  img.help {
+    cursor:help;
+  }
+  .sample {
+  text-align: left;
+  width: 16px;
+}
+  .standard {
+    border:1px solid black;
+    background: #C0C0C0;
+    font-size:12px;
+  }
+  .standard th {
+    border-bottom:1px solid black;
+    padding:0;
+    font-size:18px;
+  }
+   /* style for week hover highlight */
+  tr.highlight td {
+    background-color:#ffffb0 !important;
+  }
+  .minical {
+    margin:0 0 5px 0;
+    border-collapse:collapse;
+    font-size:10px;
+  }
+  .minical caption a {
+    color: #B04040;
+    font-weight:bold;
+  }
+  .minical caption a:hover {
+    color:#0000ff;
+  }
+  .minical th {
+    border:0 solid black;;
+    padding:0 2px;
+  }
+  .minical th,
+  .minical td.empty {
+    background:white;
+    color:black;
+    text-align:center;
+  }
+  .minical th.empty {
+    background:transparent;
+  }
+  .minical td {
+    background: lightgrey;
+    border:1px solid black;;
+    padding:0 2px;
+  }
+  .minical td a {
+    margin:0;
+    padding:3px;
+    text-align:center;
+    display:block;
+  }
+  .minical td.weekend,
+  #editentry th.weekend {
+    background: grey;
+  }
+  .minical td#today {
+    background: #FFFF33;
+  }
+  .minical td.hasevents {
+    font-weight:bold;
+  }
+  .minitask {
+    width:98%;
+    margin-left:1px;
+    border:1px solid #000;
+  }
+  .minitask tr.header th,
+  .minitask tr.header td {
+    border-bottom:2px solid #000;
+    padding:0;
+    background: #C0C0C0;
+    font-size:12px;
+    text-align:center;
+  }
+  .minitask tr.header td {
+    margin:0;
+    border-bottom:0;
+    text-align:right;
+  }
+  .sorter {
+    margin:0;
+    border-bottom:0px;
+    cursor:pointer;
+    text-align:left !important;
+  }
+  .sorterbottom {
+   border-bottom:1px solid #000 !important;
+  }
+  .minitask  td {
+    border-bottom:1px solid #000;
+    padding:0;
+    color:white;;
+    font-size:12px;
+    text-align:center;
+  }
+  .minitask td.filler {
+    border-bottom:0;
+    padding:0;
+  }
+  .task {
+    color:white;;
+  }
+  #admin table,
+  #pref table {
+    vertical-align:top;
+  }
+  #admin input,
+  #admin select,
+  #pref input,
+  #pref select {
+    margin:0 3px;
+  }
+  #admin .main td,
+  #pref .main td {
+    height:30px;
+  }
+  #admin .main td,
+  #admin .main th,
+  #pref .main td,
+  #pref .main th {
+    font-size:12px;
+  }
+  #admin .empty,
+  #pref .empty {
+    border-top:transparent;
+    border-left:transparent;
+  }
+  #admin .main td.weekcell,
+  #pref .main td.weekcell {
+    margin:0;
+    background-color: white;
+    color: black;
+    text-align:center;
+    text-decoration:none;
+    vertical-align:middle;
+  }
+  #admin .main th.weekcell,
+  #pref .main th.weekcell {
+    background:transparent;
+  }
+  #admin .main td.empty,
+  #admin .main td.weekcell,
+  #admin .main th.empty,
+  #admin .main th.weekcell,
+  #pref .main td.empty,
+  #pref .main td.weekcell,
+  #pref .main th.empty,
+  #pref .main th.weekcell {
+    width:1%;
+  }
+  #admin #tabscontent p,
+  #pref #tabscontent p {
+    padding:0 .25em;
+    clear:both;
+  }
+  #admin #tabscontent p label,
+  #pref #tabscontent p label {
+    clear:both;
+    float:left;
+    width:25%;
+    margin:0;
+  }
+  #admin #tabscontent_colors p,
+  #pref #tabscontent_colors p,
+  #admin #tabscontent_colors p label,
+  #pref #tabscontent_colors p label {
+    clear:none;
+  }
+  #admin #saver {
+    clear:both;
+    margin-top:1em;
+  }
+  #example_month {
+    float:right;
+    width:45%;
+    margin:3em 1em 0;
+    background: white;
+  }
+  #example_month p {
+    color: white;
+    font-weight:bold;
+    text-align:center;
+  }
+  #pref .tooltip{
+    width:175px;
+    vertical-align:top;
+  }
+  #minicalendar table {
+    width: 160px;
+  }
+  #minicalendar td,
+  #minicalendar th {
+    font-size: 11px;
+  }
+  .embactlog {
+    width:100%;
+    border-right:1px solid black;
+    border-bottom:1px solid black;
+    border-spacing:0;
+  }
+  .embactlog tr {
+    background:#FFF;
+  }
+  .embactlog .odd {
+    background:#EEE;
+  }
+  .embactlog th {
+    width:14%;
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+    border-left:1px solid black;
+    padding:1px 3px;
+  }
+  .embactlog th.action,
+  .embactlog th.cal,
+  .embactlog th.usr {
+    width:7%;
+  }
+  .embactlog td {
+    border-left:1px solid black;
+    padding:1px 3px;
+  }
+  #day div.minicalcontainer {
+    border:1px solid #000;
+    padding:3px;
+    vertical-align:top;
+  }
+  #day table.minical {
+    margin-right:auto;
+    margin-left:auto;
+  }
+  #day .minical caption {
+    margin-right:auto;
+    margin-left:auto;
+    background: white;
+    color: black;
+    font-weight:bold;
+    /* font-size:47px; */
+  }
+  #day .minical td.selectedday {
+    border:2px solid black;
+  }
+  #day .monthnav th {
+    border:0;
+    padding:3px;
+    text-align:center;
+  }
+  .menuhref {
+    font-size:12px;
+    font-family: arial, verdana, sans-serif;
+  }
+  #datesel td.field {
+    font-size:12px;
+  }
+  .glance {
+    width:100%;
+    border-right:1px solid black;
+    border-bottom:1px solid black;
+  }
+  .glance th.empty {
+    border-top:1px solid black;;
+    border-left:1px solid black;;
+    background:black;;
+  }
+  .glance th.row {
+    width:14%;
+    height:40px;
+    border-top:1px solid black;
+    border-left:1px solid black;
+    vertical-align:middle;
+  }
+  .glance td {
+    border-top:1px solid black;
+    border-left:1px solid black;
+    padding-left:3px;
+    background-color: #C0C0C0;
+    vertical-align:top;
+  }
+  #day .glance td {
+    width:86%;
+    height:40px;
+  }
+  #day dl.desc {
+    margin:0;
+    padding:0;
+  }
+  #day dl.desc dt {
+    font-weight:bold;
+  }
+  #day dl.desc dd {
+    margin:0;
+    padding-left:20px;
+  }
+  #year #monthgrid td {
+    padding:0 5px;
+    vertical-align:top;
+  }
+  #year .minical tr {
+    vertical-align:top;
+  }
+  #viewm .main,
+  #viewr .main,
+  #viewt .main,
+  #viewv .main,
+  #week .main {
+    border-collapse:collapse;
+  }
+  #pref .main th,
+  #viewv .main th,
+  #viewl .main th,
+  #month .main th {
+    width:14%;
+  }
+  #vieww .main th,
+  #week .main th {
+    width:12%;
+  }
+  #viewr th.small {
+    background:none;
+    font-size:8px;
+  }
+  #viewd .main th {
+    border-right:1px solid black;
+    padding:1px;
+  }
+  a.weekcell {
+    color: #FF6633;
+  }
+  #pref .main th.weekcell,
+  #viewl .main th.empty,
+  #day .main th.empty,
+  #month .main th.empty{
+    width:1%;
+    border-top:0;
+    border-left:0;
+    background:transparent;
+  }
+  #pref .main td.weekcell,
+  #viewl .main td.weekcell,
+  #month .main td.weekcell {
+    width:1%;
+    margin:0;
+    background-color: white;
+    font-size:12px;
+    text-align:center;
+    text-decoration:none;
+    vertical-align:middle;
+  }
+  #pref .main td.empty,
+  #pref .main th.empty {
+    width:1%;
+    border-top-color:transparent;
+    border-left-color:transparent;
+  }
+  #pref .main td.weekcell,
+  #pref .main th.weekcell {
+    width:1%;
+  }
+  #viewv .main th.empty,
+  #viewm .main th.empty,
+  #vieww .main th.empty,
+  #viewr .main th.empty,
+  #week .main th.empty {
+    width:5%;
+    border-top:1px solid black;;
+    border-left:1px solid black;;
+    background:none;
+    background:transparent;
+  }
+  #week .main th.row {
+    width:5%;
+    height:40px;
+    vertical-align:top;
+  }
+  #viewt.main {
+    margin:0;
+    padding:0;
+  }
+  #vieww .main th.row,
+  #viewv .main th.row,
+  #viewm .main th.row,
+  #viewt .main th {
+    width:10%;
+    vertical-align:top;
+  }
+  #viewt .main th.weekend {
+    width: 10%;
+    vertical-align: top;
+  }
+  #viewv .main th.row {
+    padding:0 5px;
+    text-align:left;
+  }
+  #viewd .main th.row {
+    border-right-width:0;
+    text-align:left;
+  }
+  #viewr th.row {
+    height:40px;
+    vertical-align:top;
+  }
+  #vieww .main th.today,
+  #viewm .main th.today,
+  #viewv .main th.today {
+    width:10%;
+  }
+  #pref .main th.today,
+  #viewr .main th.today,
+  #week .main th.today {
+    width:14%;
+  }
+  #viewr .main th a,
+  #week .main th a,
+  #weekdetails .main th a {
+    color: #0000ff;
+  }
+  #viewr .main th a:hover,
+  #week .main th a:hover,
+  #weekdetails .main th a:hover {
+    color:#0000ff;
+  }
+  #year .minical td {
+    text-align:center;
+    vertical-align:top;
+  }
+  #pref .main td {
+    height:30px;
+    font-size:12px;
+  }
+  #viewl .main td,
+  #month .main td {
+    height:75px;
+    font-size:12px;
+    /*overflow:auto;*/
+    table-layout:fixed;
+    vertical-align:top;
+  }
+  #vieww .main td,
+  #week .main td,
+  #viewr .main td,
+  #viewm .main td,
+  #viewv .main td {
+    font-size:12px;
+    padding-left:3px;
+  }
+  #viewl #prevmonth {
+    float:left;
+  }
+  #viewl #nextmonth {
+    float:right;
+  }
+  #month .minical caption,
+  #viewl .minical caption {
+    margin-left:4ex;
+  }
+  #year .minical {
+    display:block;
+  }
+  #year .minical caption {
+    margin:0 auto;
+  }
+  #viewl .minical,
+  #month .minical {
+    margin:0 4px;
+    border:0;
+  }
+  .topnav {
+    border:0;
+  }
+  .title {
+    width:99%;
+    text-align:center;
+  }
+  #day .title {
+    margin-top:3px;
+    text-align:center;
+  }
+  #day .title .date,
+  .title .date {
+    color: black;
+    font-weight:bold;
+    font-size:24px;
+    text-align:center;
+  }
+  .title .titleweek {
+    color: black;
+    font-size:20px;
+  }
+  .title .viewname,
+  #day .title .user,
+  .title .user {
+    color: black;
+    font-weight:bold;
+    font-size:18px;
+    text-align:center;
+  }
+  #weekdetails .main {
+    width:90%;
+  }
+  #weekdetails .main th {
+    width:100%;
+    padding:2px;
+  }
+  #weekdetails .main td {
+    height:75px;
+  }
+  #viewt table.timebar {
+    width:100%;
+    border-collapse:collapse;
+  }
+  #viewt td.timebar {
+    width:90%;
+    background:#ffffff;
+    color:#909090;
+    font-size:10px;
+    text-align:center;
+  }
+  #viewt .yardstick td {
+    padding:0;
+    border:1px solid #909090;
+  }
+  #viewt td.entry {
+    padding:0;
+    background-color: black;
+  }
+  #viewt table.timebar a {
+    text-align:inherit !important;
+  }
+    #viewt table.timebar td {
+    width: 1%;
+  }
+  .viewnav {
+    width:99%;
+    border:0;
+  }
+  #login {
+    margin-top:30px;
+    margin-bottom:50px;
+  }
+  #register table,
+  #login table {
+    border:1px solid black;
+    background-color: #C0C0C0;
+    font-size:12px;
+  }
+  .cookies {
+    font-size:13px;
+  }
+  .strikethrough {
+    text-decoration:line-through;
+  }
+  .pub {
+    background:#80FF80;
+    text-align:center;
+  }
+  .conf {
+    background:#FFFF80;
+    text-align:center;
+  }
+  .priv {
+    background:#FF5050;
+    text-align:center;
+  }
+  .boxtop {
+   border-top:1px solid #808080;
+  }
+  .boxright {
+   border-right:1px solid #808080;
+  }
+  .boxbottom {
+   border-bottom:1px solid #808080;
+  }
+  .boxleft {
+   border-left:1px solid #808080;
+  }
+  .boxall {
+   border:1px solid #808080;
+   padding-left:3px;
+  }
+  .leftpadded {
+   padding-left:50px;
+   text-align:left;
+  }
+  .location {
+   font-size:10px;
+  }
+  .byxxx th,
+  .byxxx td {
+   text-align:center;
+  }
+  .icon_text {
+   width:10px;
+   height:10px;
+   border:0;
+  }
+  .minitask td.pct,
+  .alignright {
+   text-align:right;
+  }
+  .minitask td.name,
+  .alignleft {
+   text-align:left;
+  }
+  .aligncenter {
+   text-align:center;
+  }
+  .aligntop {
+   vertical-align:top;
+  }
+  .bold {
+   font-weight:bold;
+  }
+  #about {
+    background-image:url( images/kn5.jpg );
+    background-repeat:no-repeat;
+  }
+  #about p {
+    margin:1px;
+    color:#303030;
+  }
+  #scroller {
+    position:absolute;
+    width:100%;
+  }
+  .alt {
+  background: #C0C0C0;
+  }  
+  .layers {
+    float:left;
+    margin:2px 1px;
+    padding:5px;
+    background: #C0C0C0;
+  }
+  .layers h4{
+    margin:0 0 5px;
+  }
+  .layers p {
+    margin:0;
+    padding-left:5px;
+    font-size:12px;
+  }
+  .layers p label {
+    font-size:13px;
+  }
+  #securityAudit {
+    border: 1px solid #c0c0c0;
+  }
+  #securityAudit th {
+    background-color: #d0d0d0;
+  }
+  #securityAudit .odd {
+    background-color: #E0E0E0;
+  }
+  #securityAudit .even {
+    background-color: #ffffff;
+  }
+  #securityAuditNotes {
+    margin: 20px;
+    border:1px solid black;
+    background-color: #C0C0C0;
+  }
+  #securityAuditNotes li {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  #accountiframe,
+  #useriframe {
+    width:90%;
+    border:0;
+  }
+  #accountiframe {
+    height:210px;
+  }
+  #useriframe {
+    height:280px;
+  }
+  #eventcomment {
+   padding:.25em;
+   border:1px solid black;
+   background: #C0C0C0;
+  }
