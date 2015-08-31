@@ -1,0 +1,12 @@
+td.SPEC_PC {
+    color: white;
+    background-color: red; }    
+td.SPEC_AUDIO, td.SPEC_VIDEO {
+    color: black;
+    background-color: cyan; }     
+td.SPEC_CIE, td.SPEC_OFFICE {
+    color: white;
+    background-color: darkblue; }  
+td.SPEC_HOME {
+    color: white;
+    background-color: orange; }  

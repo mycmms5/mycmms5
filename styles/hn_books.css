@@ -1,0 +1,25 @@
+/* Styles for Book List */    
+td.SPEC_THRILLER {
+    color: white;
+    background-color: red; }
+td.SPEC_ROMAN {
+    color: black;
+    background-color: orange; }
+td.SPEC_ART {
+    color: black;
+    background-color: cyan; }  
+td.SPEC_DEVELOPMENT, td.SPEC_HOME {
+    color: white;
+    background-color: darkgreen; }     
+td.SPEC_PROFESSIONAL {
+    color: white;
+    background-color: darkblue; }     
+td.SPEC_SCIENCE {
+    color: yellow;
+    background-color: darkblue; }    
+td.SPEC_SCIENCE2 {
+    color: red;
+    background-color: darkblue; }  
+td.SPEC_POLITICAL {
+    color: red;
+    background-color: darkgrey; }      

@@ -1,0 +1,59 @@
+/**
+* MYCMMS cash, kms
+*/
+td.SPEC_Couts {
+    color: black;
+    background-color: orange;  }
+td.SPEC_Auto {
+    color: black;
+    background-color: yellow; }    
+td.SPEC_Facture {
+    color: white;
+    background-color: green; }    
+td.SPEC_Expenses {
+    color: white;
+    background-color: darkgrey; }    
+td.SPEC_RSZ, td.SPEC_TVA  {
+    color: white;
+    background-color: darkblue; }    
+td.SPEC_Investissement {
+    color: black;
+    background-color: lightgreen; } 
+td.SPEC_ERROR {
+    color: red;
+    background-color: darkgrey; }           
+td.SPEC_2009Q4,
+td.SPEC_2010Q2,td.SPEC_2010Q4,
+td.SPEC_2011Q2,td.SPEC_2011Q4,
+td.SPEC_2012Q2,td.SPEC_2012Q4,
+td.SPEC_2013Q2,td.SPEC_2013Q4,
+td.SPEC_2014Q2,td.SPEC_2014Q4,
+td.SPEC_2015Q2,td.SPEC_2015Q4
+{
+    color: black;
+    background-color: olive; }          
+td.SPEC_2010Q1,td.SPEC_2010Q3,
+td.SPEC_2011Q1,td.SPEC_2011Q3,
+td.SPEC_2012Q1,td.SPEC_2012Q3,
+td.SPEC_2013Q1,td.SPEC_2013Q3,
+td.SPEC_2014Q1,td.SPEC_2014Q3,
+td.SPEC_2015Q1,td.SPEC_2015Q3 {
+    color: black;
+    background-color: green; }    
+
+td.SPEC_FILL-UP {
+    color: white;
+    background-color: red;
+}
+td.SPEC_ORDER {
+    color: white;
+    background-color: darkgreen;
+}
+td.SPEC_NEGOTIATION {
+    color: black;
+    background-color: orange;
+}
+td.SPEC_Maintenance {
+    color: red;
+    background-color: orange;
+}

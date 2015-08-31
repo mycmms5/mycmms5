@@ -1,0 +1,35 @@
+/** category **/
+td.SPEC_Serie, td.SPEC_Serie-Police, td.SPEC_Thriller {
+    color: black;
+    background-color: lightgreen; }
+td.SPEC_SciFi, td.SPEC_Serie-SciFi, td.SPEC_Serie-History, td.SPEC_History {
+    color: red;
+    background-color: silver; }
+td.SPEC_Serie-Comedy, td.SPEC_Comedy, td.SPEC_Music  {
+    color: black;
+    background-color: orange; }
+td.SPEC_Film, td.SPEC_Youth,td.SPEC_Movie {
+    color: white;
+    background-color: darkblue; }
+td.SPEC_Animation {
+    color: darkblue;
+    background-color: orange; }
+td.SPEC_OTHER {
+    color: black;
+    background-color: lightgreen; }
+/** storage **/
+td.SPEC_HAMA {
+    color: white;
+    background-color: darkgreen; }
+td.SPEC_VAULTZ {
+    color: white;
+    background-color: darkgreen; }
+td.SPEC_BOX {
+    color: white;
+    background-color: red; }                        
+td.SPEC_MAP {
+    color: white;
+    background-color: darkblue; }                        
+td.SPEC_PC {
+    color: black;
+    background-color: olive; } 

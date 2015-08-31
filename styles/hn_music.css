@@ -1,0 +1,186 @@
+/* Styles for Music List */
+td.SPEC_JAZZ {   
+    color: black;
+    background-color: orange;  }
+td.SPEC_WORLD {
+    color: black;
+    background-color: olive;  }    
+td.SPEC_CLASSIC, td.SPEC_OPERA {   
+    color: white;
+    background-color: darkblue; }
+td.SPEC_POP {
+    color: white;
+    background-color: red; }
+td.SPEC_ROCK {
+    color: white;
+    background-color: darkred; }
+td.SPEC_METAL {
+    color: white;
+    background-color: darkblue; }    
+td.SPEC_PUNK {
+    color: white;
+    background-color: black; }    
+td.SPEC_NL {
+    color: black;
+    background-color: yellow; }
+td.SPEC_FR {
+    color: darkgreen;
+    background-color: yellow; }
+td.SPEC_IT {
+    color: red;
+    background-color: yellow; }
+td.SPEC_DISCO {
+    color: black;
+    background-color: fuchsia; }   
+td.SPEC_FOLK {
+    color: white;
+    background-color: green; }    
+td.SPEC_SOUL, td.SPEC_COUNTRY {
+    color: white;
+    background-color: brown; }    
+/* Styles for Guarantee categories */    
+td.SPEC_PC {
+    color: black;
+    background-color: red; }    
+td.SPEC_AUDIO, td.SPEC_VIDEO {
+    color: black;
+    background-color: cyan; }     
+td.SPEC_CIE {
+    color: white;
+    background-color: darkblue; }  
+td.SPEC_Active {
+    color: black;
+    background-color: green; }     
+td.SPEC_Archive {
+    color: black;
+    background-color: lightgrey; }    
+td.SPEC_DRAWER {
+    color: black;
+    background-color: cyan; }
+td.SPEC_GONE {
+    color: white;
+    background-color: darkblue; }  
+td.SPEC_BW {
+    color: black;
+    background-color: orange; }                  
+td.SPEC_APPLE {
+    color: black;
+    background-color: orange; }  
+/* Styles for VIDEO locations */    
+td.SPEC_HAMA {
+    color: white;
+    background-color: darkgreen; }
+td.SPEC_UNKNOWN, td.SPEC_Temporary, td.SPEC_XPS {
+    color: white;
+    background-color: red;
+}                            
+td.SPEC_BOX {
+    color: white;
+    background-color: red; }                        
+td.SPEC_MAP {
+    color: white;
+    background-color: darkblue; }                        
+td.SPEC_PC {
+    color: black;
+    background-color: olive; } 
+td.SPEC_OS {
+    color: black;
+    background-color: orange; }                           
+td.SPEC_GONE {
+    color: white;
+    background-color: darkgrey; }  
+/* Styles for Articles */
+td.SPEC_PDF {
+    color: black;
+    background-color: cyan; }
+td.SPEC_INTERNET {
+    color: black;
+    background-color: darkgreen; }
+td.SPEC_GROUP {
+    background-color: orange; }    
+td.SPEC_COMPOSER {
+    background-color: cyan; } 
+/**
+* framework_list_kms.tpl
+*/
+td.SPEC_FILL-UP {
+    color: white;
+    background-color: red;
+}
+td.SPEC_ORDER {
+    color: white;
+    background-color: darkgreen;
+}
+td.SPEC_NEGOTIATION {
+    color: black;
+    background-color: orange;
+}
+td.SPEC_Maintenance {
+    color: red;
+    background-color: orange;
+}
+td.SPEC_Music {
+    color: black;
+    background-color: red;
+}
+td.SPEC_Travel {
+    color: white;
+    background-color: darkgrey;
+}
+td.SPEC_Serie, td.SPEC_Serie-Police {
+    color: black;
+    background-color: lightgreen;
+}
+td.SPEC_SciFi, td.SPEC_Serie-SciFi, td.SPEC_Serie-History {
+    color: red;
+    background-color: silver;
+}
+td.SPEC_Serie-Comedy {
+    color: black;
+    background-color: orange;
+}
+td.SPEC_Film, td.SPEC_Youth {
+    color: white;
+    background-color: darkblue;
+}
+td.SPEC_Animation {
+    color: darkblue;
+    background-color: orange;
+}
+td.SPEC_OTHER {
+    color: black;
+    background-color: lightgreen;
+}
+td.SPEC_CBC, td.SPEC_DB, td.SPEC_INSURANCE {
+    color: white;
+    background-color: darkblue; }
+td.SPEC_BILL {
+    color:black;
+    background-color: orange; }
+td.SPEC_SW, td.SPEC_SOFTWARE {
+    color:white;
+    background-color: green; }
+td.SPEC_LOG, td.SPEC_BROL {
+    color: black;
+    background-color: lightyellow; }
+td.SPEC_INFO, td.SPEC_MANUAL {
+    color: black;
+    background-color: skyblue; }
+td.SPEC_NO {
+    color: white;
+    background-color: black; }
+td.SPEC_ZZ {
+    color: white;
+    background-color: darkred; }
+td.SPEC_I_ {
+    color: black;
+    background-color: orange; }
+td.SPEC__V {
+    color: black;
+    background-color: yellow; }
+td.SPEC_IV {
+    color: white;
+    background-color: darkgreen; }
+td.SPEC_XX, td.SPEC_A_ {
+    color: white;
+    background-color: darkred; }
