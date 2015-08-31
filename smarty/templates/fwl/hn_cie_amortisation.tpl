@@ -1,0 +1,9 @@
+{if $dr.1 gt 0}<td bgcolor="green" align="right">{else}<td>{/if}{$dr.2}</td>
+{if $dr.2 gt 0}<td bgcolor="green" align="right">{else}<td>{/if}{$dr.2}</td>
+{if $dr.3 gt 0}<td bgcolor="green" align="right">{else}<td>{/if}{$dr.3}</td>
+{if $dr.4 gt 0}<td bgcolor="green" align="right">{else}<td>{/if}{$dr.4}</td>
+{if $dr.5 gt 0}<td bgcolor="green" align="right">{else}<td>{/if}{$dr.5}</td>
+{if $dr.6 gt 0}<td bgcolor="green" align="right">{else}<td>{/if}{$dr.6}</td>
+{if $dr.7 gt 0}<td bgcolor="green" align="right">{else}<td>{/if}{$dr.7}</td>
+{if $dr.8 gt 0}<td bgcolor="green" align="right">{else}<td>{/if}{$dr.8}</td>
+{if $dr.9 gt 0}<td bgcolor="green" align="right">{else}<td>{/if}{$dr.9}</td>

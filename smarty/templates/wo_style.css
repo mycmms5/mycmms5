@@ -1,0 +1,16 @@
+div.PL {
+    color: white;
+    background-color: darkgreen;
+}
+div.F {
+    color: black;
+    background-color: lightgrey;
+}
+div.PR {
+    color: white;
+    background-color: red;
+}
+div.DONE {
+    color: darkblue;
+    background-color: orange;
+}
