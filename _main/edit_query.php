@@ -3,19 +3,6 @@
 * Help function used to save changes made by the administrator to the queries
 * 
 * @author  Werner Huysmans <werner.huysmans@skynet.be>
-* @access  public
-* @package framework
-* @subpackage SQL
-* @filesource
-* @todo Not well integrated in list.php, this is the original code from FreeCMMS
-* ::: ../myCMMS/_main/edit_query.php , v 3.2 2011/01/27 09:29:41 (huysmans) :::
-* CVS
-* $Id: edit_query.php,v 1.2 2013/04/17 05:34:55 werner Exp $
-* $Source: /var/www/cvs/mycmms40/mycmms40/_main/edit_query.php,v $
-* $Log: edit_query.php,v $
-* Revision 1.2  2013/04/17 05:34:55  werner
-* Inserted CVS variables Id,Source and Log
-*
 */
 require("../includes/config_mycmms.inc.php");
 /**

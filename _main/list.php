@@ -7,16 +7,7 @@
 * - handles LIMIT and ORDER
 *
 * @author  Werner Huysmans <werner.huysmans@skynet.be>
-* @access  public
-* @package framework
-* @subpackage list_frame
-* @filesource
-* @todo Move Login Screen to Smarty Template 
-* CVS
-* $Id: list.php,v 1.3 2013/06/08 11:26:45 werner Exp $
-* $Source: /var/www/cvs/mycmms40/mycmms40/_main/list.php,v $
-* $Log: list.php,v $
-* Revision 5.0  2015/07/26  17:00:00  werner
+* @done 2015/07/26  17:00:00  werner
 * - Inside the DisplayLogin it's now possible to change the database
 * - although there are switch statements on DisplayLogin and DisplayPageSmarty 
 */

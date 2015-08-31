@@ -7,18 +7,7 @@
 * - Reloads LIST 
 * 
 * @author  Werner Huysmans <werner.huysmans@skynet.be>
-* @access  public
-* @package framework
-* @subpackage authorisation
-* @filesource
-* CVS
-* $Id: auth.php,v 1.5 2013/12/25 08:30:08 werner Exp $
-* $Source: /var/www/cvs/mycmms40/mycmms40/_main/auth.php,v $
-* $Log: auth.php,v $
-* Revision 5.0  2015/07/26  08:30:08  werner
-* - One authorisation for both systems
-* - Home and TD use the profile now
-* @todo  add a field to sys.system to select the default tab (e.g. in td this is now work_orders), this could be done by reading out the table and adjusting the javascipt at the bottom
+* @todo: no hard-coding for start tab - via system table?
 */
 $nosecurity_check=true;
 require("../includes/config_mycmms.inc.php");

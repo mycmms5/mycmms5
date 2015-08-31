@@ -3,26 +3,7 @@
 * nav.php: composes the menu with the elements in table sys_navigation.
 * 
 * @author  Werner Huysmans <werner.huysmans@skynet.be>
-* @access  public
-* @package framework
-* @subpackage navigation_frame
-* @filesource
-* CVS
-* $Id: nav.php,v 1.3 2013/06/08 11:26:33 werner Exp $
-* $Source: /var/www/cvs/mycmms40/mycmms40/_main/nav.php,v $
-* $Log: nav.php,v $
-* Revision 5.0  2015/07/26 11:26:33  werner
-* - Check this code, no solution for KooPHP 
-* @todo KoolPHP
-* 
-* Revision 1.3  2013/06/08 11:26:33  werner
-* tabmenu changes
-* + PDO transaction
-* + JS openwindow_params
-*
-* Revision 1.2  2013/04/17 05:34:55  werner
-* Inserted CVS variables Id,Source and Log
-*
+* @todo possibility to default the tab to an action
 */
 $nosecurity_check=true;
 require("../includes/config_mycmms.inc.php");
