@@ -1,5 +1,4 @@
 DEL /S *.bak
 DEL /S *.xlsx
-DEL /S *.old
-rmdir /S CVS
+RENAME *.old *.php4
 PAUSE
