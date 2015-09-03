@@ -33,7 +33,7 @@ function setFocus() {
 <tr><td align="right">{t}Revenues{/t}</td>
     <td align="left"><input type="text" name="REVENUES" size="10" style="text-align: right" value="{$data.REVENUES}">
 {if $data.TYPE eq 'Facture'}    
-     {include file="_calendar.tpl" NAME="PDATE" VALUE=$data.PDATE}
+     {include file="_calendar2.tpl" NAME="PDATE" VALUE=$data.PDATE}
 {/if}</td></tr>    
 <tr><td align="right">{t}VAT{/t} / {t}VAT Rate{/t}</td>
     <td align="left"><input type="text" name="VAT" size="10" style="text-align: right" value="{$data.VAT}"></td></tr>    

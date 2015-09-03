@@ -18,7 +18,18 @@
 require("../includes/config_mycmms.inc.php");
 $_SESSION['criteria']=$_REQUEST['ID']; 
 $QUERY_NAME=$_REQUEST['QUERY_NAME'];
-$link="list.php?query_name=".$QUERY_NAME;
+switch ($_SESSION['system']) {
+case 'td':
+case 'oee':
+case 'production':
+case 'pms':
+case 'home':
+    $link="list.php?query_name=".$QUERY_NAME;
+    break;
+default:
+    $link="list.php?query_name=".$QUERY_NAME;
+    break; 
+} // End of switch
 ?>
 <html>
 <script type="text/javascript">

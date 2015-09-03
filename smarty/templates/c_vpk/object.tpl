@@ -33,7 +33,7 @@ function setFocus() {
     </tr>
 <tr><td class="LABEL">{t}BOM{/t}</td>
     <td colspan="2"><b>{$data.SPARECODE}</b></td></tr>
-<tr><td class="LABEL">WinCC tagname</td><td><b>{$wincc}</b></td></tr>
+<tr><td class="LABEL">WinCC tagname</td><td><input type="text" name="SCADA" value="{$data.SCADA}">{$wincc}</b></td></tr>
 <tr><td class="LABEL">{t}Safety Note{/t}</td>
     <td colspan="2"><textarea name="SAFETYNOTE" cols="60" rows="10">{$data.SAFETYNOTE}</textarea></td></tr>
 

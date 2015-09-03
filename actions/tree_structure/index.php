@@ -20,7 +20,7 @@ require_once("../../includes/config_mycmms.inc.php");
 /**
 * Read treewindow.ini file
 */
-$ini_array = parse_ini_file("treewindow.ini", true);
+$ini_array = parse_ini_file("../tree/treewindow.ini", true);
 $table_width=$ini_array[$_SESSION['tree']]["table_width"];
 $tree_table=$ini_array[$_SESSION['tree']]["tree_table"];
 $table_title=$ini_array[$_SESSION['tree']]["table_title"];
@@ -28,7 +28,7 @@ $myfunction=$ini_array[$_SESSION['tree']]["function"];
 $function_edit=$ini_array[$_SESSION['tree']]['function_edit'];
 $function_print=$ini_array[$_SESSION['tree']]['function_print'];
 $filter=$ini_array[$_SESSION['tree']]['filter'];
-include_once('./treenode_class_structure.php');
+include_once('./treenode_class.php');
 
 if (isset($_REQUEST['tree'])) {
     $_SESSION['tree']=$_REQUEST['tree'];    

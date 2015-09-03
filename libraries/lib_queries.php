@@ -3,11 +3,6 @@
 * Save and store SQL 
 * 
 * @author  Werner Huysmans <werner.huysmans@skynet.be>
-* @changed:   2009
-* @access  public
-* @package libraries
-* @subpackage SQL_library
-* @filesource
 */
 /**
 * Retrieve query from sys_queries
@@ -35,6 +30,8 @@ function get_sql_data($sql_name) {
 */
 function set_sql($sql_name,$sql_query){
     $DB=DBC::get();
+    DebugBreak();
+    if ($substr($sql_name,0,2)=="P_") { die("Cannot change parameter query"); }
     $found=DBC::fetchcolumn("SELECT COUNT(*) FROM sys_queries WHERE name='$sql_name'",0);
     try {
         $DB->beginTransaction();

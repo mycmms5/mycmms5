@@ -7,11 +7,8 @@ function setFocus() {
     window.focus();
 }
 </script>
-<script src="../libraries/calendar.js" type="text/javascript"></script>
-<script src="../libraries/calendar-en.js" type="text/javascript"></script>
-<script src="../libraries/calendar-setup.js" type="text/javascript"></script>
+{include file="_jscal2.tpl"}
 <link href="{$stylesheet}" rel="stylesheet" type="text/css" />
-<link href="{$stylesheet_calendar}" rel="stylesheet" type="text/css" />
 </head>
 <body onload="setFocus()">
 <form method="post" class="form" name="treeform" action="{$SCRIPT_NAME}">
@@ -26,9 +23,9 @@ function setFocus() {
     <td><input type="text" name="MAILFROM" value="{$data.MAILFROM}"></td></tr>
 <tr><td colspan="2" align="left"><textarea cols="120" rows="6" name="SUBJECT">{$data.SUBJECT}</textarea></td></tr>
 <tr><td align="right">{t}DeadLine{/t}</td>
-    <td>{include file="_calendar.tpl" NAME="DEADLINE" VALUE=$data.DEADLINE}</td></tr>
+    <td>{include file="_calendar2.tpl" NAME="DEADLINE" VALUE=$data.DEADLINE}</td></tr>
 <tr><td align="right">{t}Closed{/t} (2020=open)</td>
-    <td>{include file="_calendar.tpl" NAME="CLOSED" VALUE=$data.CLOSED}</td></tr>
+    <td>{include file="_calendar2.tpl" NAME="CLOSED" VALUE=$data.CLOSED}</td></tr>
 
 <tr><td colspan="2"><input type="submit" class="submit" value="{t}Save & Close{/t}" name="close"></td></tr>
 </table>

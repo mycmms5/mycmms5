@@ -19,7 +19,7 @@
 session_start();
 require("../includes/config_mycmms.inc.php");
 # require("functions_mycmms.php");
-require("functions_webcal.php");
+require("cal/functions_webcal.php");
 require("setup.php"); 
 
 

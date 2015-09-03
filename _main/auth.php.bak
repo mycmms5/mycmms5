@@ -37,7 +37,7 @@ if(!empty($_POST['uid']) && !empty($_POST['passwd']))
     } else {    
 /**
 * When the login fails, show something.
-* TODO: SMARTY screen to give some more information 
+* @todo SMARTY screen to give some more information 
 */
 		require("setup.php");
         $tpl=new smarty_mycmms();

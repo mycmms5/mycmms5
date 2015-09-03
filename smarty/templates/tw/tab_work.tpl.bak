@@ -7,8 +7,11 @@ function setFocus() {
     window.focus();
 }
 </script>
-{include file="_jscal2.tpl"}
+<script src="../libraries/calendar.js" type="text/javascript"></script>
+<script src="../libraries/calendar-en.js" type="text/javascript"></script>
+<script src="../libraries/calendar-setup.js" type="text/javascript"></script>
 <link href="{$stylesheet}" rel="stylesheet" type="text/css" />
+<link href="{$stylesheet_calendar}" rel="stylesheet" type="text/css" />
 </head>
 <body onload="setFocus()">
 <form method="post" class="form" name="treeform" action="{$SCRIPT_NAME}">
@@ -22,7 +25,7 @@ function setFocus() {
 <tr><td align="right">Requestor</td>
     <td align="left"><input type="text" name="ORIGINATOR" size="20" value="HUYSMANS_WERNER"></td></tr>
 <tr><td align="right">Request Date</td>
-    <td align="left">{include file="_calendar2.tpl" NAME="REQUESTDATE" VALUE=$data.REQUESTDATE}</td></tr>    
+    <td align="left">{include file="_calendar.tpl" NAME="REQUESTDATE" VALUE=$data.REQUESTDATE}</td></tr>    
 <!--
 <tr><td align="right">Object</td>
     <td><input type="text" name="EQNUM" value="{$data.EQNUM}">&nbsp;
@@ -37,7 +40,7 @@ function setFocus() {
         <input name="DESCRIPTION" size="35" value="{$data.DESCRIPTION}"></td></tr>    
         
 <tr><td align="right">WO Type</td>
-    <td>{include file="_combobox.tpl" type="NUM"  options=$types NAME="WOTYPE" SELECTEDITEM=$data.WOTYPE}</td></tr>    
+    <td>{include file="_combobox_num.tpl" type="NUM"  options=$types NAME="WOTYPE" SELECTEDITEM=$data.WOTYPE}</td></tr>    
 <tr><td colspan="2">
     <input type="submit" class="submit" value="{t}Save{/t}" name="form_save">
     <input type="submit" class="submit" value="{t}Close{/t}" name="close"></td></tr>

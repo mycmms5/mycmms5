@@ -114,7 +114,6 @@ class DBC extends PDO {
             $st=self::$dbh->query($sql);
             $all=$st->fetchAll(PDO::FETCH_COLUMN,1);
         } catch (Exception $e) {
-            DebugBreak();
             PDO_log($e);
         }
         return count($all);

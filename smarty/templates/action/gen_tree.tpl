@@ -6,9 +6,8 @@
 <body>
 
 {if $step eq "FORM"}
-<h1 class="action">{t}Generate Tree (equip, RFF, myCMMS){/t}</h1>    
-<h3 class="action"><u>First Step:</u> Select the Table for which you want to generate the tree</h3>
-<p>{$title}</p>
+<h1 class="action">{t}Global Operation{/t}</h1>    
+<h3 class="action"><u>First Step:</u> {$title}</h3>
 <form action="{$SCRIPT_NAME}" method="post">
 <input type="hidden" name="STEP" value="1">
 Give Table:&nbsp;{include file="_combobox.tpl" type="LIST" options=$tables NAME="TABLE" SELECTEDITEM=""}

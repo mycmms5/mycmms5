@@ -7,11 +7,8 @@ function setFocus() {
     window.focus();
 }
 </script>
-<script src="../libraries/calendar.js" type="text/javascript"></script>
-<script src="../libraries/calendar-en.js" type="text/javascript"></script>
-<script src="../libraries/calendar-setup.js" type="text/javascript"></script>
+{include file="_jscal2.tpl"}
 <link href="{$stylesheet}" rel="stylesheet" type="text/css" />
-<link href="{$stylesheet_calendar}" rel="stylesheet" type="text/css" />
 </head>
 <body onload="setFocus()">
 <form method="post" class="form" name="treeform" action="{$SCRIPT_NAME}">
@@ -19,7 +16,7 @@ function setFocus() {
 <table width="800">
 <tr><th colspan="2">{t}CBC PRO Register{/t}</td></tr>
 <tr><td align="right">{t}TX date{/t}</td>
-    <td align="left">{include file="_calendar.tpl" NAME="TXDATE" VALUE=$data.TXDATE}&nbsp;
+    <td align="left">{include file="_calendar2.tpl" NAME="TXDATE" VALUE=$data.TXDATE}&nbsp;
         <input type="checkbox" name="new">&nbsp;NEW</td></tr>
 <tr><td align="right">{t}Amount{/t}</td>
     <td align="left"><input name="AMOUNT" type="text" size="8" value="{$data.AMOUNT}"></td></tr>

@@ -31,8 +31,10 @@ td {
 <body>
 <form id="sampleForm" name="sampleForm" method="post" action="{$actionScript}">
 <table align="center">
-<tr><th>Field</th><th>Value</th></tr>
-<tr><td>{$criteria1}</td><td><input type="text" name="VAR1" id="VAR1" value=""></td>
+<tr><th>Field</th><th>Value</th><th>New Entry</th></tr>
+<tr><td>{$criteria1}</td>
+    <td>{include file="_combobox.tpl" type="LIST" options=$choices_crit1 NAME="VAR1" SELECTEDITEM=""}</td>
+   <td><input type="text" name="VAR1NEW" value="New Entry"></td></tr>
 {if $criteria2 neq "N/A"}
 <tr><td>{$criteria2}</td><td><input type="text" name="VAR2" id="VAR2" value=""></td>
 {/if}

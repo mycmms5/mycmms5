@@ -7,11 +7,9 @@ function setFocus() {
     window.focus();
 }
 </script>
-<script src="../libraries/calendar.js" type="text/javascript"></script>
-<script src="../libraries/calendar-en.js" type="text/javascript"></script>
-<script src="../libraries/calendar-setup.js" type="text/javascript"></script>
+{include file="_jscal2.tpl"}
 <link href="{$stylesheet}" rel="stylesheet" type="text/css" />
-<link href="{$stylesheet_calendar}" rel="stylesheet" type="text/css" />
+
 </head>
 <body onload="setFocus()">
 
@@ -20,7 +18,7 @@ function setFocus() {
 <table width="800">
 <tr><th colspan="2">Software Information #{$data.ID}</th></tr>
 <tr><td align="right">{t}Date{/t}</td>
-    <td align="left">{include file="_calendar.tpl" NAME="date_ID" VALUE=$data.date_ID}</td></tr>
+    <td align="left">{include file="_calendar2.tpl" NAME="date_ID" VALUE=$data.date_ID}</td></tr>
 <tr><td align="right">{t}Category{/t}</td>
     <td align="left">{include file="_combobox.tpl" type="LIST"  options=$categories NAME="category" SELECTEDITEM=$data.category}&nbsp;{$data.category}&nbsp;<input type="checkbox" name="new">&nbsp;NEW</td></tr>
 <tr><th align="right">RULES</th>

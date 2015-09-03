@@ -2,10 +2,10 @@
 <!-- Start of header section -->
 <head>
 <title>PLAN calendar for myCMMS</title>
-<script type="text/javascript" src="../includes/js/prototype.js"></script>
-<script type="text/javascript" src="../includes/menu/JSCookMenu.js"></script>
-<script type="text/javascript" src="../includes/menu/themes/default/theme.js"></script>
-<script type="text/javascript" src="../includes/js/util.js"></script>
+<script type="text/javascript" src="../libraries/cal/prototype.js"></script>
+<script type="text/javascript" src="../libraries/cal/JSCookMenu.js"></script>
+<script type="text/javascript" src="../libraries/cal/themes/default/theme.js"></script>
+<script type="text/javascript" src="../libraries/cal/util.js"></script>
 <script type="text/javascript">
 function positionPage() 
 {   var position='{$smarty.session.WEBCAL_LOCATION}';

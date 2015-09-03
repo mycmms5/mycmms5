@@ -10,7 +10,7 @@
 require("../includes/config_mycmms.inc.php");
 // error_reporting(E_ALL);
 date_default_timezone_set('Europe/London');
-$excel_filename=$rootdirs['docs'].$_SESSION['query_name']."_".str_pad(rand(0,9999),4,"0").'.xlsx';
+$excel_filename="../documents/mysql2excel/".$_SESSION['query_name']."_".str_pad(rand(0,9999),4,"0").'.xlsx';
 $columns=array("-","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","AA","AB","AC","AD","AE","AF","AG","AH","AI","AJ","AK","AL","AM","AN","AO","AP","AQ","AR","AS","AT","AU","AV","AW","AX","AY","AZ"); // Translation of columns into letters
 $messages=array(); // Capturing progress messages
 
@@ -78,5 +78,5 @@ $tpl->assign("messages",$messages);
 $tpl->assign("excel_filename",$excel_filename);
 $tpl->assign("session",$_SESSION);
 $tpl->assign("wikipage","Printout ALL work orders");
-$tpl->display_error("export_2_excel.tpl");
+$tpl->display_error("action/export_2_excel.tpl");
 ?>

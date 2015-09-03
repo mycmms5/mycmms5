@@ -7,11 +7,8 @@ function setFocus() {
     window.focus();
 }
 </script>
-<script src="../libraries/calendar.js" type="text/javascript"></script>
-<script src="../libraries/calendar-en.js" type="text/javascript"></script>
-<script src="../libraries/calendar-setup.js" type="text/javascript"></script>
+{include file="_jscal2.tpl"}
 <link href="{$stylesheet}" rel="stylesheet" type="text/css" />
-<link href="{$stylesheet_calendar}" rel="stylesheet" type="text/css" />
 </head>
 <body onload="setFocus()">
 <form method="post" class="form" name="treeform" action="{$SCRIPT_NAME}">
@@ -25,7 +22,7 @@ function setFocus() {
 <tr><td align="right">{t}TX type{/t}</td>
     <td>{include file="_combobox.tpl" type="NUM"  options=$tx_types NAME="type2" SELECTEDITEM=$data.type2} &nbsp;{$data.type2}</td></tr>
 <tr><td align="right">{t}TX date{/t}</td>
-    <td align="left">{include file="_calendar.tpl" NAME="txdate" VALUE=$data.txdate}</td></tr>
+    <td align="left">{include file="_calendar2.tpl" NAME="txdate" VALUE=$data.txdate}</td></tr>
 <tr><td align="right">{t}Comments{/t}</td>
     <td align="left"><textarea name="comment" cols="50" rows="3">{$data.comment}</textarea></td></tr>
 <tr><td align="right">{t}TX{/t}&nbsp;<input type="text" name="payment" size="10" style="text-align: right" value="{$data.payment}"></td>    
