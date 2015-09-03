@@ -36,14 +36,14 @@ session_start();
 $_SESSION['DEBUG']=true;
 if ($rootfile) {
     require("config_settings.inc.php");
-    set_include_path(".".PATH_SEPARATOR."./includes".PATH_SEPARATOR."./libraries".PATH_SEPARATOR."./styles".PATH_SEPARATOR.PEAR_PATH);  
+    set_include_path(".".PATH_SEPARATOR."./includes".PATH_SEPARATOR."./libraries".PATH_SEPARATOR."./styles".PATH_SEPARATOR."../common/open_source");  
 } else if($deep2) {
     require("config_settings.inc.php");
-    set_include_path(".".PATH_SEPARATOR."../../includes".PATH_SEPARATOR."../../libraries".PATH_SEPARATOR."../styles".PATH_SEPARATOR.PEAR_PATH);      
+    set_include_path(".".PATH_SEPARATOR."../../includes".PATH_SEPARATOR."../../libraries".PATH_SEPARATOR."../styles".PATH_SEPARATOR."../../../common/open_source");      
 }
 else {
     require("config_settings.inc.php");
-    set_include_path(".".PATH_SEPARATOR."../includes".PATH_SEPARATOR."../libraries".PATH_SEPARATOR."../styles".PATH_SEPARATOR.PEAR_PATH);
+    set_include_path(".".PATH_SEPARATOR."../includes".PATH_SEPARATOR."../libraries".PATH_SEPARATOR."../styles".PATH_SEPARATOR."../../common/open_source");
 }
 /**
 * Initialization of the Database interface
