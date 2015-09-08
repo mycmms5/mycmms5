@@ -27,9 +27,9 @@ if (isset($Ident_1) && $Ident_1!="new") {
 <form action="<?PHP echo $_SERVER['SCRIPT NAME']; ?>" method="post" class="form">
 <input type="hidden" name="id1" value="<?PHP echo $Ident_1; ?>">
 <table width="600">
-<tr><td align="right">Brand</td>
+<tr><td class="LABEL">Brand</td>
 	<td><?PHP echo create_text("Brand", 25, $data->Brand); ?></td></tr>
-<tr><td align="right">Object</td>
+<tr><td class="LABEL">Object</td>
 	<td><?PHP echo create_text("Objekt", 45, $data->Objekt); ?></td></tr>
 <tr><td colspan="2" align="center"><input type="submit" class="submit" value="Save & Close" name="form_save">
                                    <input type="submit" class="submit" value="New" name="form_new">

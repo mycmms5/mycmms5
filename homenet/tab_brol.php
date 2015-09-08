@@ -13,20 +13,18 @@ class password extends inputPageSmarty {
         $tpl->assign("stylesheet",STYLE_PATH."/".CSS_SMARTY);
         $tpl->assign("data",$data);
         $tpl->assign("ID",$this->input1);
-        $tpl->display("tw/recipe.tpl");
+        $tpl->display("tw/brol.tpl");
     } // EO page_content
     function process_form() {   // Only updating
         $DB=DBC::get();
         try {
             $DB->beginTransaction();
             if ($_REQUEST['new']=="on") {
-                DBC::execute("INSERT INTO recipes (ID,Recipe,Ingredients,Preparation) VALUES (null,:recipe,:ingredients,:preparation)",
-                    array("recipe"=>$_REQUEST['Recipe'],"ingredients"=>$_REQUEST['Ingredients'],"preparation"=>$_REQUEST['Preparation']));
+                DBC::execute("INSERT INTO palm_brol (Objekt,Brand,Storage) VALUES (:objekt,:brand,:storage)",array("objekt"=>$_REQUEST['Objekt'],"brand"=>$_REQUEST['Brand'],"storage"=>$_REQUEST['Storage']));
                 $_SESSION['Ident_1']=DBC::fetchcolumn("SELECT LAST_INSERT_ID()",0);
                 $_SESSION['Ident_2']=0;
             } else {    
-                DBC::execute("UPDATE recipes SET Recipe=:recipe,Ingredients=:ingredients,Preparation=:preparation WHERE ID=:id",
-                    array("recipe"=>$_REQUEST['Recipe'],"ingredients"=>$_REQUEST['Ingredients'],"preparation"=>$_REQUEST['Preparation'],"id"=>$_REQUEST['id1']));
+                DBC::execute("UPDATE palm_brol SET Objekt=:objekt,Brand=:brand,Storage=:storage WHERE ID=:id",array("objekt"=>$_REQUEST['Objekt'],"brand"=>$_REQUEST['Brand'],"storage"=>$_REQUEST['Storage'],"id"=>$_REQUEST['id1']));
             }
             $DB->commit();
         } catch (Exception $e) {
@@ -37,6 +35,6 @@ class password extends inputPageSmarty {
 } // EO Class
 
 $inputPage=new password();
-$inputPage->data_sql="SELECT * FROM recipes WHERE ID='{$inputPage->input1}'";
+$inputPage->data_sql="SELECT * FROM palm_brol WHERE ID='{$inputPage->input1}'";
 $inputPage->flow();
 ?>

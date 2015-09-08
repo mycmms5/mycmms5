@@ -8,17 +8,17 @@ public function page_content() {
 ?>
 <input type="hidden" name="id1" value="<?PHP echo $this->input1; ?>">
 <table width="600">
-<tr><td valign ="top" align="right"><?PHP echo _("Task Description"); ?></td>
+<tr><td valign ="top" class="LABEL"><?PHP echo _("Task Description"); ?></td>
     <td><?PHP echo create_text("TASKDESC",60,$data->TASKDESC) ?></td></tr>
 <tr><td colspan="2"><?PHP echo create_area("TEXTS",80,10,$data->TEXTS) ?></td></tr>
-<tr><td align="right"><?PHP echo _("Requestor"); ?></td>
+<tr><td class="LABEL"><?PHP echo _("Requestor"); ?></td>
     <td><?PHP echo create_text("ORIGINATOR",20,"HUYSMANS_WERNER"); ?></td></tr>
-<tr><td align="right"><?PHP echo _("Request Date"); ?></td>
+<tr><td class="LABEL"><?PHP echo _("Request Date"); ?></td>
     <td><?PHP echo create_date_box("REQUESTDATE","REQUESTDATE",10,$data->REQUESTDATE); ?></td></tr>
-<tr><td align="right"><?PHP echo _("WO type") ?></td>
+<tr><td class="LABEL"><?PHP echo _("WO type") ?></td>
     <td><?PHP   $options = array("REPAIR","PROJECT","MAINTENANCE");
                 echo create_combofix("WOTYPE",$options,"PROJECT",""); ?></td></tr>
-<tr><td align="right"><?PHP echo _("Techn.Object") ?>:</td>
+<tr><td class="LABEL"><?PHP echo _("Techn.Object") ?>:</td>
     <td><?PHP   $Preselect_EQNUM = $data->EQNUM;
                 if (empty($data->EQNUM)) {
                     $Preselect_EQNUM="HOME";

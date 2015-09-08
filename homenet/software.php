@@ -14,7 +14,7 @@ class software extends inputPageSmarty {
         $tpl->assign("sitetypes",array("INFO","eBusiness","eStore"));
         $tpl->assign("data",$data);
         $tpl->assign("ID",$this->input1);
-        $tpl->display("tab_software.tpl");
+        $tpl->display("tw/software.tpl");
     } // EO page_content
     function process_form() {   // Only updating
         $DB=DBC::get();
