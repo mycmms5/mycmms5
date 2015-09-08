@@ -1,9 +1,8 @@
-<style TYPE="text/css" TITLE="2D Input" MEDIA=all> 
 body {
     font-family: arial, helvetica, geneva, sans-serif;
     font-size: 11px;
   	background-color:  #F0F0F0;
-    color: #333333; }
+    color: black; }
 h1 {
 	font-size: 12px;
 	background-color: lightgrey;
@@ -50,7 +49,7 @@ a.nav:link
 a.nav:visited   
 {
 	font-family: arial, helvetica, geneva, sans-serif; 
-	color: #000000.
+	color: #000000;
 	text-decoration: none;
 }
 a.nav:hover     
@@ -73,7 +72,7 @@ td.topline {	border-width: 2px;        }
 td {
     font-family: arial, helvetica, geneva, sans-serif; 
     font-size: 14px;
-    
+    border-width: 1px;
 }
 td.name             
 {	font-family: arial, helvetica, geneva, sans-serif; 
@@ -124,4 +123,3 @@ th
 	background-color: #000000;
 	color: #FFFFFF;
 	margin-left: 3%; }	
-</style>

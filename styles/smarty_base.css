@@ -4,11 +4,20 @@ body {
     margin:0px; 
     padding:0px; 
     background-color: lightgrey; }
-input, text, select, textarea, datum {
-    font-family: Verdana, Geneva, sans-serif; 
+input[type="text"],
+textarea {
     font-size: 12px;
     color: black; 
-    background-color: white; }  
+    background-color: white; }
+input[type="submit"] {
+    padding: 1px 6px;
+    font-size: 14px; }  
+input[type="submit"].HOMENET,
+input[type="submit"].MYCMMS
+{
+    background: darkblue; 
+    color: white;
+} 
 table {
     background-color: transparent;
     border-width: thin;

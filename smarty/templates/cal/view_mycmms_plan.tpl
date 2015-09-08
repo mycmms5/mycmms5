@@ -3,7 +3,9 @@
 <head>
 <title>PLAN calendar for myCMMS</title>
 <script type="text/javascript" src="../libraries/cal/prototype.js"></script>
+<!--
 <script type="text/javascript" src="../libraries/cal/JSCookMenu.js"></script>
+-->
 <script type="text/javascript" src="../libraries/cal/themes/default/theme.js"></script>
 <script type="text/javascript" src="../libraries/cal/util.js"></script>
 <script type="text/javascript">
@@ -38,27 +40,17 @@ function setCookie(c_name,value,exdays) {
 // alert("Refresh Message");
 </script>
 <!-- <script type="text/javascript" src="../includes/js_cacher.php?inc=js/popups.php/true"></script> -->
-<script type="text/javascript" src="../includes/js/popups.js"></script>
+<script type="text/javascript" src="../libraries/cal/popups.js"></script>
 <link rel="stylesheet" type="text/css" href="../styles/plancalendar_theme.css" />
 <link rel="stylesheet" type="text/css" href="../styles/plancalendar_basic.css" />
 <style type="text/css">{include file="wo_style.css"}</style>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<script language="JavaScript" type="text/javascript">
-<!-- <![CDATA[
-      var myMenu =
-[[_cmNoAction,'<td>&nbsp;&nbsp;</td>'],['<img src="../includes/menu/icons/home.png" alt="Home" />','<blink></blink>','plan_mycmms.php','',''],
- [_cmNoAction, '<td>&nbsp;&nbsp;</td>'],['<img src="../includes/menu/icons/printer.png" alt="" />','<blink></blink>','plan_mycmms.php','',''],
-];
-//]]> -->
-</script>
 </head>
-
 <!-- Start of BODY - HEADER1 -->
 <body id="year" onload="cmDraw( 'myMenuID', myMenu, 'hbr', cmTheme, 'Theme' ); positionPage();">  
 <table width="100%" class="ThemeMenubar" cellspacing="0" cellpadding="0" summary="">
-<tr><td class="ThemeMenubackgr"><div id="myMenuID"></div></td>
-<!-- Month selection -->
-    <td class="ThemeMenubackgr ThemeMenu" align="right">
+<tr><!-- Month selection -->
+    <td class="ThemeMenubackgr ThemeMenu" align="center">
     <form action="plan_mycmms.php" method="get" name="SelectMonth" id="monthmenu"> 
         <label for="monthselect"><a href="javascript:document.SelectMonth.submit()">Month</a>:&nbsp;</label>
         <select name="date" id="monthselect" onchange="document.SelectMonth.submit()">
@@ -72,7 +64,7 @@ function setCookie(c_name,value,exdays) {
         </select>
     </form></td>  
 <!-- Week selection -->    
-    <td class="ThemeMenubackgr ThemeMenu" align="right">
+    <td class="ThemeMenubackgr ThemeMenu" align="center">
     <form action="plan_mycmms.php" method="get" name="SelectPlan" id="planmenu">
         <label for="planselect"><a href="javascript:document.SelectPlan.submit()">Plan</a>:&nbsp;</label>
         <select name="date" id="planselect" onchange="document.SelectPlan.submit()">
@@ -85,30 +77,14 @@ function setCookie(c_name,value,exdays) {
         {/foreach}
         </select>
     </form></td>
-<!-- Year selection -->    
-    <td class="ThemeMenubackgr ThemeMenu" align="right">
-    <form action="year.php" method="get" name="SelectYear" id="yearmenu">
-        <label for="yearselect"><a href="javascript:document.SelectYear.submit()">Year</a>:&nbsp;</label>
-        <select name="year" id="yearselect" onchange="document.SelectYear.submit()">
-        {foreach item=year from=$years}
-        {if $year.selected} 
-            <option value="{$year.option}" selected>{$year.value}</option>
-        {else}
-            <option value="{$year.option}">{$year.value}</option>  
-        {/if}
-        {/foreach}
-        </select>
-    </form></td>    
-    <td class="ThemeMenubackgr ThemeMenu" align="right">
-    <a class="menuhref" title="Logout" href="login.php?action=logout">Logout:</a>&nbsp;<label>{$user}</label>&nbsp;</td>
     </tr>
 </table>
  
 <div style="width:99%;">
 <a title="{t}Previous{/t}" class='prev' href="plan_mycmms.php?date={$prevdate}" target="maintmain">
-<img src="../images/leftarrow.gif" alt="{t}Previous{/t}"></a>
+<img src="../images/leftarrowsmall.gif" alt="{t}Previous{/t}"></a>
 <a title="{t}Next{/t}" class="next" href="plan_mycmms.php?date={$nextdate}" target="maintmain">
-<img src="../images/rightarrow.gif" alt="{t}Next{/t}"></a>
+<img src="../images/rightarrowsmall.gif" alt="{t}Next{/t}"></a>
 <div class="title">
 <span class="date">{$thisdate|date_format: "%d-%B (%Y)"}&nbsp;&nbsp;&nbsp; <span class="viewname">{$view_name}</span> &nbsp;&nbsp;&nbsp; {$wkend|date_format: "%d-%B (%Y)"}</span><br />
 </div>
