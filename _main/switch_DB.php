@@ -17,8 +17,18 @@
 * - The script is accessed now from within the login Window, where an extra option permits to switch databases
 * @todo check if a non-admin can do this?
 */
+/**
+if ($_SESSION['profile']!=1) {
+    echo "Only administrator can change the database";
+    exit; }
+**/    
 $nosecurity_check=true;
 require("../includes/config_mycmms.inc.php");
+/**
+* V5 compatible databases
+*/
+$databases=array("HOMENET","VPK","REMACLE","DEMB","DEVELOPMENT","TOTAL","SONOCO");
+$non_compatible=array("HOMENET_LENOVO","COMECO");
 
 switch ($_REQUEST['STEP']) {
     case "DB": {
@@ -53,7 +63,6 @@ setTimeout("reload();", 500)
 /**
 * Projects REMACLE, DEMB, AUBY and BALEN are incompatible with Version5
 */
-        $databases=array("DEVELOPMENT","HOMENET","VPK");
         $tpl=new smarty_mycmms();
         $tpl->assign("stylesheet",STYLE_PATH."/".CSS_SMARTY);
         $tpl->assign("databases",$databases);
