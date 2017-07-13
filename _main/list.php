@@ -18,12 +18,13 @@ class mainlistPage extends ListPageSmarty {
     public function DisplayLogin() {
         require("setup.php");
         $DB=DBC::get();
+        $template=operation_template("login.php");
         $tpl=new smarty_mycmms();
         $tpl->assign('stylesheet',"../styles/lists.css");
         $tpl->assign('stylesheet_exception',"../styles/exc_login.css");
         $tpl->assign('authorisation_script',"../_main/auth.php");
         $tpl->assign('change_DB_script',"../_main/switch_DB.php");
-        $tpl->display_error("fw/login.tpl");
+        $tpl->display_error($template);
     }
 /** Alternatives    
     public function DisplayLoginList() {
