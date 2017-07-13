@@ -17,6 +17,7 @@
 */
 $nosecurity_check=true;
 require("../includes/config_mycmms.inc.php"); // Get Logo
+$version=__FILE__." :V5.0 Build ".date ("F d Y H:i:s.", filemtime(__FILE__));
 require("setup.php");
 $system=$_SESSION['system'];    # system can be td, production, oee
 $DB=DBC::get();
@@ -29,6 +30,9 @@ $tpl->assign('tabs',$DB->query("SELECT tab,tabheader FROM sys_mainwindow WHERE s
 $tpl->assign('nav',$_SESSION['nav']);   // Selected Tab
 $tpl->assign('user',$_SESSION['user']); // Logged in as 
 $tpl->assign('DB',$_SESSION['db']);     // Active DB
+$tpl->assign('version',$version);
+$template=operation_template(__FILE__);
+$tpl->assign('template',$template);
 switch ($system) {
     case 'td':
         $tpl->assign('index',"index.php");      // Default
@@ -50,5 +54,5 @@ switch ($system) {
         $tpl->assign('auth',"auth.php");   // Default            
         break;
 }
-$tpl->display_error("fw/title.tpl");
+$tpl->display_error($template);
 ?>

@@ -18,6 +18,8 @@
 *
 */
 require("../includes/config_mycmms.inc.php");
+$template=operation_template($_SERVER["SCRIPT_NAME"]);
+
 if ($_SERVER['REQUEST_METHOD']=='GET') {
     $DB=DBC::get();
     $sql = "SELECT params FROM sys_queries WHERE name='{$_REQUEST['query_name']}'";
@@ -41,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD']=='GET') {
     $tpl->assign('stylesheet',STYLE_PATH."/".CSS_SMARTY);
     $tpl->assign("query_name",$_REQUEST['query_name']);
     $tpl->assign("params",$params);
-    $tpl->display_error("fw/params.tpl");
+    $tpl->display_error($template);
 } else {
     $QUERY=$_REQUEST['query_name'];
     $_SESSION['param1']=$_REQUEST['param1'];

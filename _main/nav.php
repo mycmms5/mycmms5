@@ -7,6 +7,7 @@
 */
 $nosecurity_check=true;
 require("../includes/config_mycmms.inc.php");
+$version=__FILE__." :V5.0 Build ".date ("F d Y H:i:s.", filemtime(__FILE__));
 $DB=DBC::get();
 // $nav=$_SESSION['nav'];  
 if(empty($_SESSION['user'])) {    
@@ -20,7 +21,6 @@ $_SESSION['from']=0;
  */
 function url($name) {   
     global $DB;     // =DBC::get();
-    global $rootdirs;
 /*  Retrieving which system this is, this functions is obsolete now...
 */
     switch ($_SESSION['system']) {
@@ -64,9 +64,6 @@ function url($name) {
 */
     $table_bp = $result->fetch(PDO::FETCH_OBJ);
     $prefix = substr($table_bp->name,0,2);
-//    mb_internal_encoding("UTF-8");
-//    $caption=iconv("UTF-8","ISO8859-1",_($table_bp->caption));
-//  $title=iconv("UTF-8","ISO8859-1",_($table_bp->title));
     $caption=_($table_bp->caption);
     $title=_($table_bp->title);
     switch ($prefix) {
@@ -106,6 +103,10 @@ function url($name) {
         } else {
             $url="<span class=\"no_link\">$caption - ".count_records("$table_bp->mysql") . "</span><br />";
         }
+        break;  
+    case "I_":
+        $top_title=_($table_bp->title);
+        $url="<a href='../actions/_redirect.php?action={$table_bp->mysql}&amp;title={$top_title}' target='maintmain'><b>$caption</b></a><br />";
         break;                          
     default:
         eval('$table_bp->mysql = "'.$table_bp->mysql.'" ;');
@@ -148,5 +149,8 @@ require("setup.php");
 $tpl=new smarty_mycmms();
 $tpl->assign('stylesheet',"../styles/nav.css");
 $tpl->assign('menu',$menu->toHtml());
-$tpl->display_error("fw/nav.tpl");
+$tpl->assign('version',$version);
+$template=operation_template(__FILE__);
+$tpl->assign('template',$template);
+$tpl->display_error($template);
 ?>
