@@ -29,7 +29,7 @@ public function page_content() {
     $tpl->assign('stylesheet',STYLE_PATH."/".CSS_SMARTY);
     $tpl->assign('data',$data);
     $tpl->assign('inventory_types',$DB->query("SELECT TYPE AS 'id',DESCRIPTION AS 'text' FROM INVTYPE",PDO::FETCH_NUM));
-    $tpl->display_error("tw/stock.tpl");
+    $tpl->display_error($this->template);
 }
 function process_form() {  
     unset($_SESSION['form_data']);
