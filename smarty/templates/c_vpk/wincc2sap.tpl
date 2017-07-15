@@ -21,10 +21,10 @@ function setFocus() {
 <tr><td class="LABEL">{t}SAP ROOT{/t}&nbsp;</td>
     <td colspan="2" align="left"><input type="text" name="EQROOT" size="75" value="{$data.QAS_ROOT}"></br>
     <b>{$data.EQROOT_DESC}</b>&nbsp;(postid:&nbsp;{$data.parent})</td></tr>
-<tr><td class="LABEL">{t}DBFLD_EQNUM{/t}-WinCC</td>
+<tr><td class="LABEL">{t}EQNUM{/t}-WinCC</td>
     <td align="left"><input type="text" name="SCADA" value="{$data.scada}" size="50"</b></br>
         <input type="text" size="50" name="SCADA_DESCRIPTION" value="{$data.scada_description}"></td></tr>
-<tr><td class="LABEL">{t}DBFLD_EQNUM{/t}-SAP</td>
+<tr><td class="LABEL">{t}EQNUM{/t}-SAP</td>
     <td><input type="text" size="50" name="EQNUM" value="{$data.QAS}"></td></tr>
 
 <tr><td colspan="2"><input type="submit" value="{t}Save{/t}" name="form_save">
