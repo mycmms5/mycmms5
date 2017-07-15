@@ -18,16 +18,21 @@
 $nosecurity_check=true;
 $rootfile=true;
 require("./includes/config_mycmms.inc.php");    # direct path
+$template=operation_template(__FILE__);
 require("./libraries/setup.php");
 $DB=DBC::get();
-$result=$DB->query("SELECT * FROM sys_system WHERE id=0");
-$row=$result->fetch(PDO::FETCH_ASSOC);
+
+$system=DBC::fetchcolumn("SELECT setting FROM sys_system WHERE id='system'",0);
 if(!empty($_GET['nav'])) {
     $_SESSION['nav']=$_GET['nav'];    
-    $_SESSION['system']=$row['system'];
+    $_SESSION['system']=$system;
 } else {
-    $_SESSION['nav']=$row['tabdefault'];
-    $_SESSION['system']=$row['system'];
+/**
+* @todo remove
+* $_SESSION['nav']=$row['tabdefault'];
+*/
+    
+    $_SESSION['system']=$system;
 }
 /**
 * In order to construct the main page we will retrieve the Tabs and their default actions from the table sys_mainwindow
@@ -42,9 +47,8 @@ $tpl=new smarty_mycmms();
 $tpl->debugging=false;
 $tpl->caching=false;
 $tpl->assign("page_title",CMMS_TITLE);
-$tpl->assign('version',"$Id: index.php,v 1.2 2013/12/25 09:04:47 werner Exp $");
 $tpl->assign("nav",$_SESSION['nav']);
 $tpl->assign("query",$action[$_SESSION['nav']]);
 $tpl->assign("title","title.php");
-$tpl->display_error("fw/index.tpl");
+$tpl->display_error($template);
 ?>
