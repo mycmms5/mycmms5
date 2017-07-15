@@ -6,14 +6,6 @@
 * @access  public
 * @package framework
 * @subpackage tree
-* @filesource
-* CVS
-* $Id: index.php,v 1.2 2013/04/30 12:50:49 werner Exp $
-* $Source: /var/www/cvs/mycmms40/mycmms40/actions/tree2/index.php,v $
-* $Log: index.php,v $
-* Revision 1.2  2013/04/30 12:50:49  werner
-* Inserted CVS variables Id,Source and Log
-*
 */
 $nosecurity_check=true; $deep2=true;
 require_once("../../includes/config_mycmms.inc.php");
@@ -28,7 +20,10 @@ $myfunction=$ini_array[$_SESSION['tree']]["function"];
 $function_edit=$ini_array[$_SESSION['tree']]['function_edit'];
 $function_print=$ini_array[$_SESSION['tree']]['function_print'];
 $filter=$ini_array[$_SESSION['tree']]['filter'];
-switch ($filter) {  # Added to provide a simple system to change treenodeclass
+/**
+* Added to provide a simple system to change treenodeclass
+*/
+switch ($filter) {
 case 'STRUCTUUR':
     include_once('./treenode_class-filter.php');
     break;
@@ -40,19 +35,7 @@ if (isset($_REQUEST['tree'])) {
     $_SESSION['tree']=$_REQUEST['tree'];    
 }
 /**
-* Read treewindow.ini file
-*/
-$ini_array = parse_ini_file("treewindow.ini", true);
-$table_width=$ini_array[$_SESSION['tree']]["table_width"];
-$tree_table=$ini_array[$_SESSION['tree']]["tree_table"];
-$table_title=$ini_array[$_SESSION['tree']]["table_title"];
-$myfunction=$ini_array[$_SESSION['tree']]["function"];
-$function_edit=$ini_array[$_SESSION['tree']]['function_edit'];
-$function_print=$ini_array[$_SESSION['tree']]['function_print'];
-$filter=$ini_array[$_SESSION['tree']]['filter'];
-/**
 * Expand all lines, start by selecting all items with children
-* @param mixed $expanded
 */
 function expand_all(&$expanded) {
       global $tree_table;  
@@ -109,29 +92,29 @@ if(isset($_REQUEST['SET'])) {
 if(!isset($_SESSION['rooteqnum'])) {
     $_SESSION['rooteqnum']=0;
 }
+require("setup.php");
+
+# Header
+$tpl=new smarty_mycmms();
+$tpl->caching=false;
 $labels=array(
     "TableWidth"=>$table_width,
     "TableTitle"=>_($table_title),
     "stylesheet"=>"../".STYLE_PATH."tree.css",
     "stylesheet_type"=>"../".STYLE_PATH."exc_prod_td_list.css"
 );
-require("setup.php");
-
-# Header
-$tpl=new smarty_mycmms();
-$tpl->caching=false;
-$tpl->assign("step","TOP");
 $tpl->assign('labels',$labels);
 $tpl->assign('rooteqnum',$_SESSION['rooteqnum']);
 $tpl->assign('tree_table',$_SESSION['tree']);
-$tpl->display_error("action/tree.tpl");
+$tpl->assign("step","TOP");
+$tpl->display_error("action/tree_view/tree.tpl");
 # Nodes
 $treeleaf=new treenode($_SESSION['rooteqnum'],'','','','',1,true,-1,$_SESSION['expanded'],false);
 $treeleaf->display($row);
 # Footer
 $tpl=new smarty_mycmms();
 $tpl->caching=false;
-$tpl->assign("step","BOTTOM");
 $tpl->assign('labels',$labels);
-$tpl->display_error("action/tree.tpl");
+$tpl->assign("step","BOTTOM");
+$tpl->display_error("action/tree_view/tree.tpl");
 ?>
