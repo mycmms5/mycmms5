@@ -11,11 +11,11 @@
 <form method="post" class="form" name="treeform" action="{$SCRIPT_NAME}">
 <input type="hidden" name="STEP" value="1">
 <input type="hidden" name="WONUM" value="{$wo_data.WONUM}" />
-<tr><td class="LABEL">{t}DBFLD_EMPCODE{/t}</td>
+<tr><td class="LABEL">{t}EMPCODE{/t}</td>
     <td align="left">{include file="_combobox.tpl" type="LIST" options=$employees NAME="EMPCODE" SELECTEDITEM=$smarty.session.webcal_user}</td></tr>
-<tr><td class="LABEL">{t}DBFLD_WODATE{/t}</td>
+<tr><td class="LABEL">{t}WODATE{/t}</td>
     <td align="left">{include file="_calendar2.tpl" NAME="WODATE" VALUE=$smarty.session.Ident_2}</td></tr>
-<tr><td class="LABEL">{t}DBFLD_ESTHRS{/t}</td>
+<tr><td class="LABEL">{t}ESTHRS{/t}</td>
     <td><input type="text" name="ESTHRS" value="{$esthrs}"></td></tr>
 <tr><td align="right" colspan="2">
     <input class="submit" type="submit" value="PLAN+" name="ACTION">
@@ -38,10 +38,10 @@
 
 <table style="width:100%; border:solid;">
 <tr><th>ID</th>
-    <th>{t}DBFLD_WODATE{/t}</th>
-    <th>{t}DBFLD_EMPCODE{/t}</th>
-    <th>{t}DBFLD_ESTHRS{/t}</th>
-    <th>{t}DBFLD_REGHRS{/t}</th></tr>
+    <th>{t}WODATE{/t}</th>
+    <th>{t}EMPCODE{/t}</th>
+    <th>{t}ESTHRS{/t}</th>
+    <th>{t}REGHRS{/t}</th></tr>
 {foreach item=woe from=$woe_data}
 <tr bgcolor="{cycle values="WHITE,LIGHTSTEELBLUE"}">
     <td>{$woe.ID}</td><td>{$woe.WODATE}</td><td>{$woe.EMPCODE}</td><td>{$woe.ESTHRS}</td><td>{$woe.REGHRS}</td></tr>
