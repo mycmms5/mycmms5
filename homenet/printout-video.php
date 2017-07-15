@@ -14,24 +14,41 @@ $nosecurity_check=true;
 require("../includes/config_mycmms.inc.php");
 require("setup.php");
 $PrtScn=true;
-$ID = $_REQUEST['id1'];
+$ID=$_REQUEST['id1'];
+$maxImage=11;
+
 
 # Data preparation
 $DB=DBC::get();
+// DebugBreak();
+$result=$DB->query("SELECT * FROM video WHERE VideoID=$ID");
+$video_data=$result->fetch(PDO::FETCH_ASSOC);
+// Cover?
+$directory=floor($ID/100);
+if (file_exists($doc_paths['video'].$directory."/DVD".$ID.".jpg")) {   $CoverAvailable=true;   }
+// Extra Images?
+$MoreImages=0;
+for ($i=1;$i<$maxImage;$i++) {
+    $extra=$doc_paths['video'].$directory."/DVD".$ID."_".$i.".jpg";
+    if (file_exists($extra)) {  $MoreImages++; }        
+}
 
 # Printout
 $tpl=new smarty_mycmms();
 $tpl->debugging=false;
 $tpl->caching=false;
 $tpl->assign("stylesheet",STYLE_PATH."/".CSS_PRINTOUT);
-$tpl->assign("SHOP",$ID);
-$tpl->assign("tickets",$DB->query("SELECT ID AS 'ID', PurchaseDate AS 'Date', Shop AS 'SHOP', Item AS 'Item', Price AS 'Price', Enddate AS 'End', Type AS 'Type', Manual AS 'Manual' FROM Guarantee WHERE Shop='$ID' ORDER BY PurchaseDate DESC"),PDO::FETCH_NUM);
+$tpl->assign("doc_path",DOC_LINK."/video/{$directory}/DVD");
+$tpl->assign("video_data",$video_data);
+$tpl->assign("CoverAvailable",$CoverAvailable);
+$tpl->assign("MoreImages",$MoreImages);
+$tpl->assign("hamas",$DB->query("SELECT * FROM video2 WHERE VideoID={$ID}",PDO::FETCH_ASSOC));
 if($PrtScn) {
-    $tpl->display('printout_shop.tpl');
+    $tpl->display_error('printout_video.tpl');
 } else {
     require('HTML2PDF/html2fpdf.php');
     require("HTML/Table.php");
-    $html_content=$tpl->fetch('printout_wo.tpl');
+    $html_content=$tpl->fetch('printout_video.tpl');
 //    $fh=fopen("test.html","w");
 //    fwrite($fh,$html_content);
 //    fclose($fh);
