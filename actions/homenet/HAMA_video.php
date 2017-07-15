@@ -29,7 +29,7 @@ $DB=DBC::get();
 /** HAMA1 
 * 
 */
-$HAMA=array("HAMANR"=>5,
+$HAMA=array("HAMANR"=>9,
             "0"=>array(1,200),
             "1"=>array(201,200),
             "2"=>array(401,200),
@@ -37,7 +37,9 @@ $HAMA=array("HAMANR"=>5,
             "4"=>array(801,200),
             "5"=>array(1001,200),
             "6"=>array(1201,200),
-            "7"=>array(1401,200));
+            "7"=>array(1401,200),
+            "8"=>array(1601,200),
+            "9"=>array(5001,600));
 $HAMAFULL=array();
 /** HAMA1 
 * 

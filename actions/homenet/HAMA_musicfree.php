@@ -13,15 +13,13 @@ table {
 td {
     color: darkgrey;
     padding: 1px;
-    font-size: 14px;
-}
+    font-size: 14px; }
+td.OCCUPIED {
+    color: black;
+    background-color: cyan; }    
 td.FREE {
     color: white;
     background-color: darkgreen; }
-td.OCCUPIED {
-    color: darkblue;
-    background-color: white;
-}    
 </style>
 <?php
 /**
@@ -51,44 +49,19 @@ for ($hama=0; $hama<=$HAMA["HAMANR"]; $hama++) {
     for ($i=$HAMA[$hama][0];$i<=$HAMA[$hama][0]+$HAMA[$hama][1]-1;$i++) {
         $RecordingID=DBC::fetchColumn("SELECT RecordingID FROM records2 WHERE HAMA=$i",0);
         if (empty($RecordingID)) {
-            echo "<tr><td width='15%' class='FREE'><I>HAMA <B>".$i."</B></td><td colspan=10 class='FREE'>is Free</I></td></tr>";        
+            echo "<tr><td width='15%' class='FREE'><I>HAMA <B>".$i."</B></td><td colspan=10>is Free</I></td></tr>";        
             $HAMAFULL[$hama]=true;
         } else {
             $result=$DB->query("SELECT * FROM records WHERE RecordingID='{$RecordingID}'");
             $record=$result->fetch(PDO::FETCH_ASSOC);
-            echo "<tr><td>HAMA <b>$i</b></td><td class='OCCUPIED'>".$record['Artist']." / ".$record['Title']."</td></tr>";
+            # echo "<tr><td>HAMA <b>$i</b></td><td class='OCCUPIED'>".$record['Artist']." / ".$record['Title']."</td></tr>";
         }
     }
-    echo "</table>";
     if (!$HAMAFULL[$hama]) {
-        echo "<B>HAMA_BOX_".($hama+1)." is completely filled</B><BR>";
-    }
-} // EO for
-/**
-for ($i=1;$i<=200;$i++) {
-    $result=$DB->query("SELECT RecordingID,Title FROM records WHERE Classification=$i");
-    $row=$result->fetchColumn(0);
-    if (empty($row)) {
-        echo "HAMA ".$i." is available<BR>";        
+        echo "<tr><th colspan='3'>HAMA_BOX_".($hama+1)." is completely filled</th></tr>";
+    } else {
+        echo "<tr><th colspan='3'>HAMA_BOX_".($hama+1)." has the following free places</th></tr>";
     }
 }
-echo "<hr>";
-for ($i=201;$i<=300;$i++) {
-    $result=$DB->query("SELECT RecordingID,Title FROM records WHERE Classification=$i");
-    $row=$result->fetchColumn(0);
-    if (empty($row)) {
-        echo "HAMA ".$i." is available<BR>";        
-    }
-}
-echo "<hr>";
-for ($i=301;$i<=500;$i++) {
-    $result=$DB->query("SELECT RecordingID,Title FROM records WHERE Classification=$i");
-    $row=$result->fetchColumn(0);
-    if (empty($row)) {
-        echo "HAMA ".$i." is available<BR>";        
-    }
-}
-echo "<hr>";
-**/
 echo DBC::fetchcolumn("SELECT MAX(Classification) AS 'HAMA' FROM records",0);
 ?>
