@@ -10,13 +10,12 @@ class password extends inputPageSmarty {
         require("setup.php");
         $tpl=new smarty_mycmms();
         $tpl->debugging=false;
-        $tpl->assign("stylesheet",STYLE_PATH."/".CSS_SMARTY);
-        $tpl->assign("stylesheet_calendar",STYLE_PATH."/".CSS_CALENDAR);
+        $tpl->assign("stylesheet",STYLE_PATH.CSS_SMARTY);
         $tpl->assign("categories",array("Delete","Active","Archive"));
         $tpl->assign("sitetypes",array("INFO","eBusiness","eStore"));
         $tpl->assign("data",$data);
         $tpl->assign("ID",$this->input1);
-        $tpl->display("tw/password.tpl");
+        $tpl->display_error($this->template);
     } // EO page_content
     function process_form() {   // Only updating
         $DB=DBC::get();
@@ -27,13 +26,12 @@ class password extends inputPageSmarty {
                 $_SESSION['Ident_1']=DBC::fetchcolumn("SELECT LAST_INSERT_ID()",0);
                 $_SESSION['Ident_2']=0;
 
-            } else {    
+            } else {
                 DBC::execute("UPDATE palm_password SET URL=:url,Username=:username,Password=:password,Email=:email,Categories=:categories,SiteType=:sitetypes,Memo=:memo WHERE ID=:id",array("url"=>$_REQUEST['URL'],"username"=>$_REQUEST['Username'],"password"=>$_REQUEST['Password'],"email"=>$_REQUEST['Email'],"categories"=>$_REQUEST['Categories'],"sitetypes"=>$_REQUEST['SiteType'],"memo"=>$_REQUEST['Memo'],"id"=>$_REQUEST['id1']));
             }
             $DB->commit();
         } catch (Exception $e) {
             $DB->rollBack();
-            PDO_log("Transaction ".__FILE__." failed: ".$e->getMessage());
         }
     } // EO process_form                
 } // EO Class

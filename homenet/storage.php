@@ -10,12 +10,12 @@ class password extends inputPageSmarty {
         require("setup.php");
         $tpl=new smarty_mycmms();
         $tpl->debugging=false;
-        $tpl->assign("stylesheet",STYLE_PATH."/".CSS_SMARTY);
+        $tpl->assign("stylesheet",STYLE_PATH.CSS_SMARTY);
         $tpl->assign("data",$data);
         $tpl->assign("ID",$this->input1);
-        $tpl->display("tw/storage.tpl");
+        $tpl->display_error($this->template);
     } // EO page_content
-    function process_form() {   // Only updating
+    function process_form() {
         $DB=DBC::get();
         try {
             $DB->beginTransaction();
@@ -25,14 +25,12 @@ class password extends inputPageSmarty {
                 $_SESSION['Ident_1']=DBC::fetchcolumn("SELECT LAST_INSERT_ID()",0);
                 $_SESSION['Ident_2']=0;
             } else {    
-#                DebugBreak();
                 DBC::execute("UPDATE storage SET object=:object,brand=:brand,storage=:storage,yyyy=:yyyy,category=:category WHERE ID=:id",
                 array("object"=>$_REQUEST['object'],"brand"=>$_REQUEST['brand'],"storage"=>$_REQUEST['storage'],"yyyy"=>$_REQUEST['yyyy'],"category"=>$_REQUEST['category'],"id"=>$_REQUEST['id1']));
             }
             $DB->commit();
         } catch (Exception $e) {
             $DB->rollBack();
-            PDO_log("Transaction ".__FILE__." failed: ".$e->getMessage());
         }
     } // EO process_form                
 } // EO Class
