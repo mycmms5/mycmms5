@@ -1,9 +1,6 @@
 {config_load file="colors.conf"}
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html;">
-<title>###</title>
 <link href="{$stylesheet}" rel="stylesheet" type="text/css" />
 </head>
 <body bgcolor="{#TITLE_BODY_BGCOLOR#}">
@@ -23,9 +20,8 @@
             {if $user eq null}
                 {t}You are not logged in {/t}::<a href='{$auth}' target='maintmain'>login</a>
             {else}
-                {$user}{t} is logged in on {/t} {$DB}::<a href='{$auth}' target='maintmain'>logout</a>
+                {$user}&nbsp;{t} is logged in on {/t}<b>{$DB}</b>::<a href='{$auth}' target='maintmain'>logout</a>
             {/if}
         </div>
     </div>
-</body>
-</html>
+{include file="fw/inputPageFooter.tpl"}

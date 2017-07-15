@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
 <head>
-<title>{t}Tab Options{/t}</title>
+<meta charset="UTF-8" />
 </head>
 <frameset cols="*" rows="65px,*" framespacing="0" border="0"  bordercolor="#000000" >
 <frame class="title" src="{$title}?nav={$nav_tab}" name="title" scrolling="no" frameborder="0" bgcolor="5961a0">

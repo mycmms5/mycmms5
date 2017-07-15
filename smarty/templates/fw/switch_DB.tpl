@@ -4,6 +4,7 @@
 </head> 
 <body>
 <h1 class="action">Switch Database</h1>    
+<!--
 <table>
 <tr><td>Select new Database</td>
     <td><form action="{$SCRIPT_NAME}" method="post">
@@ -12,6 +13,13 @@
 <tr><td colspan="2"><input type="submit" name="Switch" value="Switch"></td></tr>
 </form>
 </table>
+-->
+<form action="{$SCRIPT_NAME}" method="post">
+<input type="hidden" name="STEP" value="DB">
+{include file="_listRadio.tpl" options=$databases NAME="DATABASE_SWITCH" SELECTEDITEM="DEVELOPMENT"}
+<input type="submit" name="Switch" value="Switch">
+</form>
+<hr>
 <table>
 <tr><th>DEFINE</th><th>Settings</th></tr>
 {foreach name=outer item=setting from=$settings}

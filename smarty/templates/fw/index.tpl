@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>{$page_title}</title>
-<meta http-equiv="Content-Type" content="text/html;" />
+<meta charset="UTF-8">
 <script type="javascript">
 window.name = "MYCMMS";
 </script>
