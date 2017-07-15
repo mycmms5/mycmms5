@@ -12,7 +12,7 @@
 set_time_limit(0);
 require("../includes/config_mycmms.inc.php");  
 require("setup.php");
-$version=__FILE__." :V5.0 Build 20150808";
+$version=__FILE__." :V5.0 Build ".date ("F d Y H:i:s.", filemtime(__FILE__));
 $filter=$_REQUEST['FILTER'];
 $check_parents = true;
 $check_children = true;
@@ -66,7 +66,7 @@ switch ($_REQUEST['STEP']) {
         $tpl->assign("stylesheet",STYLE_PATH."/".CSS_SMARTY);
         $tpl->assign("version",$version);
         $tpl->assign("step","FORM");
-        $tpl->assign("title","Check parent-child relation and check if an object has children");
+        $tpl->assign("title","Check parent-child relation and check if an object has children - select table");
         $tpl->assign('tables',$DB->query("SELECT treetablename AS id, treetablename AS text FROM tbl_treetables WHERE active=1",PDO::FETCH_NUM));
         $tpl->display_error("action/gen_tree.tpl");
     }
