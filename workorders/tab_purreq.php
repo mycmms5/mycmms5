@@ -22,9 +22,9 @@ public function page_content() {
 </form>
 <!-- Ending the standard form -->
 <table class='list'>
-<tr><th class="th"><?PHP echo _("DBFLD_ITEMNUM"); ?></th> 
-    <th class="th"><?PHP echo _("DBFLD_DESCRIPTIONONPO"); ?></th>   
-    <th class="th"><?PHP echo _("DBFLD_QTYREQUESTED"); ?></th></tr>
+<tr><th class="th"><?PHP echo _("ITEMNUM"); ?></th> 
+    <th class="th"><?PHP echo _("DESCRIPTIONONPO"); ?></th>   
+    <th class="th"><?PHP echo _("QTYREQUESTED"); ?></th></tr>
 <?PHP
     foreach($result->fetchAll(PDO::FETCH_OBJ) as $row) {
         $this->data_sql="SELECT SEQNUM AS 'ID',ITEMNUM,DESCRIPTIONONPO,NOTES,QTYREQUESTED FROM purreq WHERE WONUM={$this->input1} AND SEQNUM={$row->ID}";
