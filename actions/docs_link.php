@@ -8,33 +8,15 @@
 * @filesource
 * @package framework
 * @filesource
-* CVS
-* $Id: docs_link.php,v 1.1 2013/12/25 08:50:00 werner Exp $
-* $Source: /var/www/cvs/homenet/homenet/actions/docs_link.php,v $
-* $Log: docs_link.php,v $
-* Revision 1.1  2013/12/25 08:50:00  werner
-* Synced versions with myCMMS
-*
-* Revision 1.2  2013/11/04 07:46:35  werner
-* CVS version shows
-*
-* Revision 1.1  2013/11/04 07:40:46  werner
-* Replaces linking_documents and tab_upload
-* Revision 1.5  2013/09/27 07:08:18  werner
-* Integrating File Description
-* Revision 1.4  2013/04/27 09:12:19  werner
-* Debug correction: call documents() causes problem
-* Revision 1.3  2013/04/17 05:44:53  werner
-* Inserted CVS variables Id,Source and Log
 */
 require("../includes/config_mycmms.inc.php");
+$template=operation_template($_SERVER["SCRIPT_NAME"]);
 require("setup.php");
-$version=__FILE__." :V5.0 Build 20150808";
+$version=__FILE__." :V5.0 Build ".date ("F d Y H:i:s.", filemtime(__FILE__));
 /** 
 * Set the documents directory where we will search documents 
 * Standard ../../common/documents_DEMO where demo is the DB name
 */
-define('PROJECT_DIR','../../common/documents_'.CMMS_DB);
 if (isset($_REQUEST['DOCTYPE'])) {  
     $_SESSION['DOCTYPE']=$_REQUEST['DOCTYPE']; 
 }
@@ -144,6 +126,7 @@ $taskdocs=$result->fetchAll(PDO::FETCH_ASSOC);
 $tpl = new smarty_mycmms();
 $tpl->assign('stylesheet',STYLE_PATH."docs_upload.css");
 $tpl->assign('version',$version);
+$tpl->assign('template',$template);
 $tpl->assign('index',$_SERVER['SCRIPT_NAME']);
 $tpl->assign('object',$_SESSION['Ident_1']);
 $tpl->assign('path', translatePath($_REQUEST['file']).'/');
@@ -151,5 +134,5 @@ $tpl->assign('files', $files);  # Files in open directory
 $tpl->assign('directories', $directories);
 $tpl->assign('rootdir',PROJECT_DIR);
 $tpl->assign('taskdocs',$taskdocs);
-$tpl->display_error('action/docs_link.tpl');
+$tpl->display_error($template);
 ?>

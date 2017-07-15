@@ -16,7 +16,7 @@
 * Revision 1.2  2013/04/17 05:40:08  werner
 * TEMP
 *
-*/ 
+*/
 ?>
 <script type="text/javascript">
     parent.title.document.getElementById('title').innerHTML='<?PHP echo $_REQUEST['title']; ?>';

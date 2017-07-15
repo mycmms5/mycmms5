@@ -35,8 +35,8 @@
 *
 */
 require("../includes/config_mycmms.inc.php");
-$version=__FILE__." :V5.0 Build 20150808";
-unset($_SESSION['PDO_ERROR']);
+$template=operation_template($_SERVER["SCRIPT_NAME"]);
+unset($_SESSION['PDO_ERROR']);                                                                        
 define("UPLOAD_DIR","../documents/upload/");    # /common/documents_DEMO/upload/
 define("UPLOAD_TMP","../documents/tmp/");     # /common/documents_DEMO/upload/tmp/
 /**
@@ -77,6 +77,7 @@ $tpl=new smarty_mycmms();
 $tpl->caching=false;
 $tpl->debugging=false;
 $tpl->assign('version',$version);
+$tpl->assign('template',$template);
 $tpl->assign("stylesheet",STYLE_PATH."docs_upload.css");
 
 switch ($_REQUEST['STEP']) {
@@ -217,6 +218,5 @@ default: {
     } // EO default
 } // EO switch
 
-$tpl->display_error("action/docs_upload.tpl");
-
+$tpl->display_error($template);
 ?>
