@@ -8,4 +8,4 @@
 require("../includes/config_mycmms.inc.php");
 $directory=floor($_SESSION['Ident_1']/100);
 ?>
-<img src="<?PHP echo DOC_LINK."music/".$directory."/".$_SESSION['Ident_1'].".jpg"; ?>" alt="Image" width="700">
+<img src="<?PHP echo DOC_LINK."music/".$directory."/".$_SESSION['Ident_1'].".jpg"; ?>" alt="Image" width="100%">

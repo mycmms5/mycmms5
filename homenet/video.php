@@ -8,7 +8,7 @@
 */
 require("../includes/config_mycmms.inc.php");
 require("class_inputPageSmarty.php");
-$version=__FILE__." :V5.0 Build 20150808";
+$version=__FILE__." :V5.0 Build ".date ("F d Y H:i:s.", filemtime(__FILE__));
 /**
 * Class Video
 * @package tabwindow
@@ -24,6 +24,7 @@ class Video extends inputPageSmarty {
         $tpl->debugging=false;
         $tpl->assign("stylesheet",STYLE_PATH."/".CSS_SMARTY);
         $tpl->assign("stylesheet_extra",STYLE_PATH."/".CSS_LIST_TD);
+        $tpl->assign("hama",DBC::fetchcolumn("SELECT MIN(HAMA) FROM video2 WHERE VideoID='{$this->input1}'",0));
         $tpl->assign("data",$data);
         $tpl->assign("ID",$this->input1);
         $tpl->display_error("tw/video.tpl");
@@ -33,13 +34,14 @@ class Video extends inputPageSmarty {
         try {
             $DB->beginTransaction();
             if ($_REQUEST['new']=="on") {    
-                DBC::execute("INSERT INTO video (title,director,actors,comment,category,recorded,SubID,storage,HAMA) VALUES (:title,:director,:actors,:comment,:category,:recorded,:SubID,:storage,:HAMA)",
+                DBC::execute("INSERT INTO video (title,director,actors,comment,category,recorded,SubID,storage,HAMA,unviewed) VALUES (:title,:director,:actors,:comment,:category,:recorded,:SubID,:storage,:HAMA,-1)",
                 array("title"=>$_REQUEST['title'],"director"=>$_REQUEST['director'],"actors"=>$_REQUEST['actors'],"comment"=>$_REQUEST['comment'],"category"=>$_REQUEST['category'],"recorded"=>$_REQUEST['recorded'],"SubID"=>$_REQUEST['SubID'],"storage"=>$_REQUEST['storage'],"HAMA"=>$_REQUEST['HAMA']));
                 $_SESSION['Ident_1']=DBC::fetchcolumn("SELECT LAST_INSERT_ID()",0);
                 $_SESSION['Ident_2']=0;
-            } else {    
-                DBC::execute("UPDATE video SET title=:title,director=:director,actors=:actors,comment=:comment,category=:category,recorded=:recorded,SubID=:SubID,HAMA=:HAMA,storage=:storage WHERE VideoID=:videoid",
-                array("title"=>$_REQUEST['title'],"director"=>$_REQUEST['director'],"actors"=>$_REQUEST['actors'],"comment"=>$_REQUEST['comment'],"category"=>$_REQUEST['category'],"recorded"=>$_REQUEST['recorded'],"SubID"=>$_REQUEST['SubID'],"storage"=>$_REQUEST['storage'],"HAMA"=>$_REQUEST['HAMA'],"videoid"=>$_REQUEST['id1']));
+            } else {  
+                if ($_REQUEST['unviewed']=="on") {  $unviewed=-1; } else {   $unviewed=0;   }
+                DBC::execute("UPDATE video SET title=:title,director=:director,actors=:actors,comment=:comment,category=:category,recorded=:recorded,SubID=:SubID,HAMA=:HAMA,storage=:storage,unviewed=:unviewed WHERE VideoID=:videoid",
+                array("title"=>$_REQUEST['title'],"director"=>$_REQUEST['director'],"actors"=>$_REQUEST['actors'],"comment"=>$_REQUEST['comment'],"category"=>$_REQUEST['category'],"recorded"=>$_REQUEST['recorded'],"SubID"=>$_REQUEST['SubID'],"storage"=>$_REQUEST['storage'],"HAMA"=>$_REQUEST['HAMA'],"videoid"=>$_REQUEST['id1'],"unviewed"=>$unviewed));
             }
             $DB->commit();
         } catch (Exception $e) {

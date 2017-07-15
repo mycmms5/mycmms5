@@ -10,7 +10,7 @@
 */
 require("../includes/config_mycmms.inc.php");
 require("class_inputPageSmarty.php");
-$version=__FILE__." :V5.0 Build 20150808";
+
 /**
 * class MusicEdit
 * @package tabwindow
@@ -33,7 +33,7 @@ class MusicEdit extends inputPageSmarty {
         $tpl->assign("audios",$DB->query("SELECT format AS id,Description AS text FROM tbl_AUDIO ORDER BY format",PDO::FETCH_NUM));
         $tpl->assign("storage",$DB->query("SELECT storage AS id,Description AS text FROM tbl_itunes ORDER BY storage",PDO::FETCH_NUM));
                
-        $tpl->display("tw/music.tpl");
+        $tpl->display($this->template);
     } // EO page_content
     function process_form() {   // Only updating
         $DB=DBC::get();
@@ -60,7 +60,6 @@ class MusicEdit extends inputPageSmarty {
 }
 
 $inputPage=new MusicEdit();
-$inputPage->version=$version;
 $inputPage->data_sql="SELECT * FROM records WHERE RecordingID={$inputPage->input1}";
 $inputPage->flow();
 ?>

@@ -13,7 +13,7 @@ class ComposerEdit extends inputPageSmarty {
         $tpl->assign("stylesheet_calendar",STYLE_PATH."/".CSS_CALENDAR);
         $tpl->assign("data",$data);
         $tpl->assign("records",$DB->query("SELECT RecordingID,Title,Format FROM records WHERE Artist='{$this->input1}'",PDO::FETCH_ASSOC));
-        $tpl->display("tab_composer.tpl");
+        $tpl->display($this->template);
     } // EO page_content
     function process_form() {   // Only updating
         $DB=DBC::get();
@@ -35,7 +35,7 @@ class ComposerEdit extends inputPageSmarty {
 }
 
 $inputPage=new ComposerEdit();
-$inputPage->data_sql="SELECT * FROM tbl_composers WHERE NAME='{$inputPage->input1}'";
+$inputPage->data_sql="SELECT * FROM tbl_composers WHERE NAME='{$inputPage->input2}'"; #$inputPage->input1
 $inputPage->flow();
 ?>
 

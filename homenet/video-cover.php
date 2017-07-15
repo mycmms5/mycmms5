@@ -9,4 +9,4 @@ require("../includes/config_mycmms.inc.php");
 session_start();
 $directory=floor($_SESSION['Ident_1']/100);
 ?>
-<img src="<?PHP echo DOC_LINK."video/dvd".$directory."/DVD".$_SESSION['Ident_1'].".jpg"; ?>" width="800" alt="Image">
+<img src="<?PHP echo DOC_LINK."video/dvd".$directory."/DVD".$_SESSION['Ident_1'].".jpg"; ?>" width="100%" alt="Image">

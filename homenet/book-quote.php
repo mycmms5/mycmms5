@@ -6,9 +6,7 @@
 * @package tabwindow
 * @subpackage books
 */
-require("../includes/config_mycmms.inc.php");
-require("class_inputPageSmarty.php");
-$version=__FILE__." :V5.0 Build 20150808";
+require("../includes/tw_header.php");
 /**
 * class book_quote
 * @package tabwindow
@@ -23,9 +21,10 @@ public function page_content() {
     $tpl=new smarty_mycmms();
     $tpl->caching=false;
     $tpl->debugging=false;
+    $tpl->assign("parent",$this->template);
     $tpl->assign("stylesheet",STYLE_PATH."/".CSS_SMARTY);
     $tpl->assign("data",$data);
-    $tpl->display("tw/bookquote.tpl");
+    $tpl->display('extends:'.$this->template.'|tw/tw_header.tpl');
 } // End page_content
 public function process_form() {
     $DB=DBC::get();

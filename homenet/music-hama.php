@@ -7,7 +7,6 @@
 */
 require("../includes/config_mycmms.inc.php");
 require("class_inputPageSmarty.php");
-$version=__FILE__." :V5.0 Build 20150808";
 
 class hama extends inputPageSmarty {
     public function page_content() {
@@ -22,7 +21,7 @@ class hama extends inputPageSmarty {
         $tpl->assign('stylesheet',STYLE_PATH."/".CSS_SMARTY);
         $tpl->assign('cds',$data);
         $tpl->assign('actual_id',$_REQUEST['ID']);
-        $tpl->display('tw/music_hama.tpl');    
+        $tpl->display($this->template);    
     } // EO page_content
 private function updateRecord($data) {
     $DB=DBC::get();
@@ -61,7 +60,6 @@ function process_form() {   // Only Updating...
 } // EO class 
 
 $inputPage=new hama();
-$inputPage->version=$version;
 // $inputPage->js="document.INSERT.TrackTitle.style.background='lightblue'; document.INSERT.TrackTitle.focus();";
 $inputPage->flow();
 ?>

@@ -7,7 +7,6 @@
 */
 require("../includes/config_mycmms.inc.php");
 require("class_inputPageSmarty.php");
-$version=__FILE__." :V5.0 Build 20150808";
 
 class tracks extends inputPageSmarty {
     public function page_content() {
@@ -30,7 +29,7 @@ class tracks extends inputPageSmarty {
         $tpl->assign('tracks',$data);
         $tpl->assign('actual_id',$_REQUEST['ID']);
         $tpl->assign('nextTrackNumber',$nextTrackNumber);
-        $tpl->display('tw/music_tracks.tpl');    
+        $tpl->display($this->template);    
     } // EO page_content
 private function updateRecord($data) {
     $DB=DBC::get();
@@ -61,7 +60,6 @@ private function insertRecord() {
 } // EO class 
 
 $inputPage=new tracks();
-$inputPage->version=$version;
 $inputPage->js="document.INSERT.TrackTitle.style.background='lightblue'; document.INSERT.TrackTitle.focus();";
 $inputPage->flow();
 ?>

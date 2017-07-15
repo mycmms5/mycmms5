@@ -7,7 +7,7 @@
 */
 require("../includes/config_mycmms.inc.php");
 require("class_inputPageSmarty.php");
-$version=__FILE__." :V5.0 Build 20150808";
+$version=__FILE__." :V5.0 Build ".date ("F d Y H:i:s.", filemtime(__FILE__));
 
 class hama extends inputPageSmarty {
     public function page_content() {
@@ -61,7 +61,7 @@ function process_form() {   // Only Updating...
 } // EO class 
 
 $inputPage=new hama();
-$version=__FILE__." :V5.0 Build 20150808";
+$version=__FILE__." :V5.0 Build ".date ("F d Y H:i:s.", filemtime(__FILE__));
 // $inputPage->js="document.INSERT.TrackTitle.style.background='lightblue'; document.INSERT.TrackTitle.focus();";
 $inputPage->flow();
 ?>

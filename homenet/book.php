@@ -8,10 +8,7 @@
 * @subpackage books
 * @filesource
 */
-require("../includes/config_mycmms.inc.php");
-require("class_inputPageSmarty.php");
-$version=__FILE__." :V5.0 Build 20150808";
-
+require("../includes/tw_header.php");
 /**
 * class BookEdit
 * @package tabwindow
@@ -29,13 +26,14 @@ public function page_content() {
     $tpl=new smarty_mycmms();
     $tpl->caching=false;
     $tpl->debugging=false;
+    $tpl->assign("parent",$this->template);
     $tpl->assign("stylesheet",STYLE_PATH."/".CSS_SMARTY);
     // $tpl->assign("stylesheet_calendar",STYLE_PATH."/".CSS_CALENDAR);
     $tpl->assign("data",$data);
     $tpl->assign("publishers",$DB->query("SELECT DISTINCT Publisher AS id, Publisher AS text FROM Books ORDER BY id",PDO::FETCH_NUM));
     $tpl->assign("topics",$DB->query("SELECT Topic AS id, Description AS text FROM tbl_BookTopic ORDER BY Topic",PDO::FETCH_NUM));
     $tpl->assign("stores",$DB->query("SELECT STORAGE AS id, Description AS text FROM tbl_BookStores",PDO::FETCH_NUM));
-    $tpl->display("tw/book.tpl");
+    $tpl->display('extends:'.$this->template.'|tw/tw_header.tpl');
 } // End page_content
 /**
 * process_form() handles the form and INSERT or UPDATE the Books table
